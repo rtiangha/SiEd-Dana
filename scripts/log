@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -f ../src/log_file;
+touch ../src/log_file;
+tail -f ../src/log_file;

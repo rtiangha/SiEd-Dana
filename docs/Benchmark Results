@@ -1,0 +1,8 @@
+SiEd version file open benchmarks:
+
+Time in ticks to open fullreview.tex as a DOC
+
+0.9.0 (incremental loading off) 	670
+(smallest incremental loading step)	294
+0.8.5					661
+0.8.4					676

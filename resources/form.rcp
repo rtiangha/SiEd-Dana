@@ -1,0 +1,1269 @@
+#include "../src/text_resource.h"
+#include "../src/form_pos.h"
+VERSION "0.10.0"
+
+// Required for AlphaSmart Dana's WideTall support
+HEX "wTap" ID 1000 0x00 0x00 0x00 0x01
+
+ICONFAMILYEX
+BEGIN
+	BITMAP "../resources/icon.bmp" BPP 1  TRANSPARENT 255 0 255
+	BITMAP "../resources/icon2.bmp" BPP 2  TRANSPARENT 255 0 255
+	BITMAP "../resources/icon2.bmp" BPP 4  TRANSPARENT 255 0 255
+	BITMAP "../resources/icon8.bmp" BPP 8  TRANSPARENT 255 0 255
+
+	BITMAP "../resources/sied_icon_hi.bmp" BPP 8 DENSITY 2 TRANSPARENT 255 255 255
+END
+
+SMALLICON "../resources/iconsmall.bmp" TRANSPARENT 255 255 255
+
+
+//
+// $Id: form.rcp,v 1.25 2005/04/13 23:05:31 bdr Exp $
+//
+
+DATA "NFNT" tinyFont      "../resources/fonts/narrowfont.bin"
+DATA "NFNT" smallFont     "../resources/fonts/narrowboldfont.bin"
+DATA "NFNT" narrowFixedFont    "../resources/fonts/narrowfixedfont.bin"
+DATA "NFNT" stdFixedFont  "../resources/fonts/stdfixedfont_sony.bin"
+DATA "NFNT" tinyHiresFont "../resources/fonts/tinyfont_palm.bin"
+DATA "NFNT" smallHiresFont "../resources/fonts/smallfont_palm.bin"
+DATA "NFNT" stdFixedHiresFont "../resources/fonts/stdfixedfont_palm.bin"
+DATA "NFNT" smallBoldHiresFont "../resources/fonts/smallboldfont_palm.bin"
+
+
+BITMAP ID 5001 COMPRESS
+BEGIN
+	BITMAP "../resources/1std1bit.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/1std2bit.bmp" BPP 2 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/1std2bit.bmp" BPP 4 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/2std8bit.bmp" BPP 8 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/3hi8bit.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+BITMAP ID 5007 COMPRESS
+BEGIN
+	BITMAP "../resources/uparrow.bmp" BPP 2 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/uparrow_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+BITMAP ID 5097 COMPRESS
+BEGIN
+	BITMAP "../resources/drag_arrow.bmp" BPP 2 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/drag_arrow_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+ICON
+BEGIN
+	BITMAP "../resources/icon.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 0 255
+	BITMAP "../resources/icon2.bmp" BPP 2 DENSITY 72 TRANSPARENT 255 0 255
+	BITMAP "../resources/icon2.bmp" BPP 4 DENSITY 72 TRANSPARENT 255 0 255
+	BITMAP "../resources/icon8.bmp" BPP 8 DENSITY 72 TRANSPARENT 255 0 255
+	BITMAP "../resources/sied_icon_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+SMALLICON "../resources/iconsmall.bmp" TRANSPARENT 255 255 255
+
+BITMAP ID 5008 COMPRESS
+BEGIN
+	BITMAP "../resources/up_scroll.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/up_scroll_hi.bmp" BPP 1 DENSITY 144 TRANSPARENT 255 255 255
+END
+BITMAP ID 5009 COMPRESS
+BEGIN
+	BITMAP "../resources/down_scroll.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/down_scroll_hi.bmp" BPP 1 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+BITMAP ID 5012 
+BEGIN
+	BITMAP "../resources/up_scroll_pressed.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/up_scroll_pressed_hi.bmp" BPP 1 DENSITY 144 TRANSPARENT 255 255 255
+END
+BITMAP ID 5011 
+BEGIN
+	BITMAP "../resources/down_scroll_pressed.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/down_scroll_pressed_hi.bmp" BPP 1 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+BITMAP ID 5010 COMPRESS
+BEGIN
+	BITMAP "../resources/padlock_bw.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255 COMPRESS
+	BITMAP "../resources/padlock.bmp" BPP 8 DENSITY 72 TRANSPARENT 255 255 255 COMPRESS
+	BITMAP "../resources/padlock_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+BITMAP ID 5006 COMPRESS
+BEGIN
+	BITMAP "../resources/sdcard.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/sdcard2.bmp" BPP 2 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/sdcard2_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+BITMAP ID 5032 COMPRESS
+BEGIN
+	BITMAP "../resources/macro.bmp" BPP 1 DENSITY 72 TRANSPARENT 255 255 255
+	BITMAP "../resources/macro_hi.bmp" BPP 8 DENSITY 144 TRANSPARENT 255 255 255
+END
+
+
+FORM ID 1000 AT ( 0 0 160 160 )
+MENUID 1200
+NOFRAME
+USABLE
+BEGIN
+	GRAFFITISTATEINDICATOR AT (152 148)
+	PUSHBUTTON "C" ID 1102 AT (136 149 5 9)
+	PUSHBUTTON "P" ID 1103 AT (PrevRight+1 PrevTop PrevWidth 9)
+
+	POPUPTRIGGER "M" ID 3109 AT ( 71 149 18 10 ) GRAPHICAL BITMAPID 5032
+	LIST "" ID 3107 AT ( 72 90 70 78) NONUSABLE DISABLED FONT 0
+	LIST "Top"  "20%" "40%"  "60%" "80%" "100%" ID 3108 AT ( 90 90 28 67) NONUSABLE DISABLED FONT 0
+	LIST "Top"  "20%" "40%"  "60%" "80%" "100%" ID 3110 AT ( 90 10 28 67) NONUSABLE DISABLED FONT 0
+
+	FIELD ID 1101 AT ( 145 148 12 12 ) UNDERLINED MAXCHARS 2 NONUSABLE
+	FIELD ID 1112 AT ( 180 180 12 12 ) UNDERLINED MAXCHARS 2
+	LABEL TEXT_FIND_COLON 1814 AT (5 87) NONUSABLE
+	FIELD ID 1801 AT (PrevRight+3 PrevTop 147-PrevWidth 12 ) UNDERLINED MAXCHARS 50 NONUSABLE
+	LABEL REPLACE_ABBR 1815 AT ( 5 PrevBottom+2 ) NONUSABLE
+	FIELD ID 1810 AT (PrevRight+1 PrevTop 149-PrevWidth 12 ) UNDERLINED MAXCHARS 50 NONUSABLE
+	
+	CHECKBOX FROM_TOP ID 1809 AT (0 PrevBottom+1 AUTO AUTO ) NONUSABLE
+	CHECKBOX MATCH_CASE ID 1804 AT (PrevRight PrevTop AUTO AUTO) NONUSABLE
+	CHECKBOX MATCH_WHOLE_WORD ID 1805 AT (0 PrevBottom AUTO AUTO ) NONUSABLE
+	
+	BUTTON TEXT_FIND ID 1802 AT ( REPLACE_FIND_BUTTON_LEFT REPLACE_FIND_BUTTON_TOP REPLACE_FORM_BUTTON_WIDTH AUTO ) NONUSABLE
+	BUTTON REPLACE_ABBR_BUTTON ID 1806 AT ( REPLACE_REPLACE_BUTTON_LEFT REPLACE_REPLACE_BUTTON_TOP REPLACE_FORM_BUTTON_WIDTH AUTO ) NONUSABLE
+	BUTTON REPLACE_ALL_ABBR ID 1807 AT ( REPLACE_ALL_BUTTON_LEFT REPLACE_ALL_BUTTON_TOP REPLACE_FORM_BUTTON_WIDTH AUTO ) NONUSABLE
+	BUTTON TEXT_EXIT ID 1803 AT (REPLACE_EXIT_BUTTON_LEFT REPLACE_EXIT_BUTTON_TOP REPLACE_FORM_BUTTON_WIDTH AUTO ) NONUSABLE
+
+END
+
+BITMAP ID 5211 COMPRESS
+BEGIN
+	BITMAP "../resources/ret_small.bmp" BPP 1  DENSITY 72
+	BITMAP "../resources/ret_small_hi.bmp" BPP 1 DENSITY 144
+END
+
+BITMAP ID 5201 COMPRESS
+BEGIN
+	BITMAP "../resources/return.bmp" BPP 1  DENSITY 72
+	BITMAP "../resources/return_hi.bmp" BPP 1 DENSITY 144
+END
+
+BITMAP ID 5221 COMPRESS
+BEGIN
+	BITMAP "../resources/return_smaller.bmp" BPP 1  DENSITY 72
+	BITMAP "../resources/return_smaller_hi.bmp" BPP 1 DENSITY 144
+END
+
+BITMAP ID 5202  COMPRESS
+BEGIN
+	BITMAP "../resources/tab.bmp" BPP 1  DENSITY 72
+	BITMAP "../resources/tab_hi.bmp" BPP 1 DENSITY 144
+END
+BITMAP ID 5203  COMPRESS
+BEGIN
+	BITMAP "../resources/backspace.bmp" BPP 1  DENSITY 72
+	BITMAP "../resources/backspace_hi.bmp" BPP 1 DENSITY 144
+END
+BITMAP ID 5204 COMPRESS
+BEGIN
+	BITMAP "../resources/down.bmp" BPP 1 DENSITY 72
+	BITMAP "../resources/down_hi.bmp" BPP 1 DENSITY 144
+END
+BITMAP ID 5205 COMPRESS
+BEGIN
+	BITMAP "../resources/up.bmp" BPP 1 DENSITY 72
+	BITMAP "../resources/up_hi.bmp" BPP 1 DENSITY 144
+END
+BITMAP ID 5206 COMPRESS
+BEGIN
+	BITMAP "../resources/left.bmp" BPP 1 DENSITY 72
+	BITMAP "../resources/left_hi.bmp" BPP 1 DENSITY 144
+END
+BITMAP ID 5207 COMPRESS
+BEGIN
+	BITMAP "../resources/right.bmp" BPP 1 DENSITY 72
+	BITMAP "../resources/right_hi.bmp" BPP 1 DENSITY 144
+END
+#ifdef LANGUAGE_RUSSIAN
+FORM ID 5100 AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop 19 AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+
+	PUSHBUTTON "q" ID 5101 AT ( 1 1 12 13 )
+	PUSHBUTTON "w" ID 5102 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "e" ID 5103 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "r" ID 5104 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "t" ID 5105 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "y" ID 5106 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "u" ID 5107 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "i" ID 5108 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "o" ID 5109 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "p" ID 5110 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "a" ID 5111 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "s" ID 5112 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "d" ID 5113 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "f" ID 5114 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "g" ID 5115 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "h" ID 5116 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "j" ID 5117 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "k" ID 5118 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "l" ID 5119 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ";" ID 5120 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "'" ID 5121 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "z" ID 5122 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "x" ID 5123 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "c" ID 5124 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "v" ID 5125 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "b" ID 5126 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "n" ID 5127 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "m" ID 5128 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "," ID 5129 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "." ID 5130 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "-" ID 5131 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "/" ID 5132 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID 5200 AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop 19 AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+
+	PUSHBUTTON "$" ID 5140 AT (1 10 11 12 )
+	PUSHBUTTON "€" ID 5141 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+	PUSHBUTTON "£" ID 5142 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "¥" ID 5143 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "[" ID 5144 AT (1 PrevBottom+1 PrevWidth PrevHeight)
+	PUSHBUTTON "]" ID 5145 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "{" ID 5146 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "}" ID 5147 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "<" ID 5148 AT (1 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON ">" ID 5149 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "\\" ID 5150 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "=" ID 5151 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "@" ID 5152 AT (1 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON "~" ID 5153 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "&" ID 5154 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "#" ID 5155 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "1" ID 5168 AT (52 1 17 15 ) FONT 2
+	PUSHBUTTON "2" ID 5169 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "3" ID 5170 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "4" ID 5171 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "5" ID 5172 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "6" ID 5173 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "7" ID 5174 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "8" ID 5175 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "9" ID 5176 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "(" ID 5177 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "0" ID 5178 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON ")" ID 5179 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "-" ID 5156 AT (109 10 11 12 )
+	PUSHBUTTON "+" ID 5157 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 24 PrevHeight ) GRAPHICAL BITMAPID 5203
+
+	PUSHBUTTON "/" ID 5159 AT (109 PrevBottom+1 11 PrevHeight)
+	PUSHBUTTON "*" ID 5160 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ":" ID 5161 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Tab" ID TabKey AT ( PrevRight+1 PrevTop PrevWidth PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "." ID 5163 AT (109 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON "," ID 5164 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 24 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "space" ID SpaceKey AT ( 109 PrevBottom+1 36 PrevHeight )
+	PUSHBUTTON "%" ID 5167 AT (PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID 5300 AT (2 KEYBOARD_TOP 156 78 )
+USABLE
+NOFRAME
+MODAL
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop 19 AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	  PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "é" ID 5301 AT ( 1 1 10 13 )
+	PUSHBUTTON "ö" ID 5302 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ó" ID 5303 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ê" ID 5304 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "å" ID 5305 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "í" ID 5306 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ã" ID 5307 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ø" ID 5308 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ù" ID 5309 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ç" ID 5310 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "õ" ID 5333 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ú" ID 5334 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "ô" ID 5311 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "û" ID 5312 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "â" ID 5313 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "à" ID 5314 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ï" ID 5315 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ð" ID 5316 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "î" ID 5317 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ë" ID 5318 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ä" ID 5319 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "æ" ID 5320 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "ý" ID 5321 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "ÿ" ID 5322 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "÷" ID 5323 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ñ" ID 5324 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ì" ID 5325 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "è" ID 5326 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ò" ID 5327 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ü" ID 5328 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "á" ID 5329 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "þ" ID 5330 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 20 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "¸" ID 5331 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "«" ID 5332 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID CapsAlphaKeyboardDialog AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop 19 AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "Q" ID 5101 AT ( 1 1 12 13 )
+	PUSHBUTTON "W" ID 5102 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "E" ID 5103 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "R" ID 5104 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "T" ID 5105 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Y" ID 5106 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "U" ID 5107 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "I" ID 5108 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "O" ID 5109 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "P" ID 5110 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "A" ID 5111 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "S" ID 5112 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "D" ID 5113 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "F" ID 5114 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "G" ID 5115 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "H" ID 5116 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "J" ID 5117 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "K" ID 5118 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "L" ID 5119 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ":" ID 5120 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "\"" ID 5121 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "Z" ID 5122 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "X" ID 5123 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "C" ID 5124 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "V" ID 5125 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "B" ID 5126 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "N" ID 5127 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "M" ID 5128 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "!" ID 5129 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "*" ID 5130 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "_" ID 5131 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "?" ID 5132 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID CapsIntlKeyboardDialog AT (2 KEYBOARD_TOP 156 78 )
+USABLE
+NOFRAME
+MODAL
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop 19 AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	  PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "É" ID 5301 AT ( 1 1 10 13 )
+	PUSHBUTTON "Ö" ID 5302 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ó" ID 5303 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ê" ID 5304 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Å" ID 5305 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Í" ID 5306 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ã" ID 5307 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ø" ID 5308 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ù" ID 5309 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ç" ID 5310 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Õ" ID 5333 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ú" ID 5334 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "Ô" ID 5311 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "Û" ID 5312 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Â" ID 5313 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "À" ID 5314 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ï" ID 5315 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ð" ID 5316 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Î" ID 5317 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ë" ID 5318 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ä" ID 5319 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Æ" ID 5320 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "Ý" ID 5321 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "ß" ID 5322 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "×" ID 5323 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ñ" ID 5324 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ì" ID 5325 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "È" ID 5326 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ò" ID 5327 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ü" ID 5328 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Á" ID 5329 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "Þ" ID 5330 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 30 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "¨" ID 5331 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "»" ID 5332 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+#else
+FORM ID 5100 AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop AUTO AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+
+	PUSHBUTTON "q" ID 5101 AT ( 1 1 12 13 )
+	PUSHBUTTON "w" ID 5102 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "e" ID 5103 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "r" ID 5104 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "t" ID 5105 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "y" ID 5106 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "u" ID 5107 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "i" ID 5108 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "o" ID 5109 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "p" ID 5110 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "a" ID 5111 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "s" ID 5112 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "d" ID 5113 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "f" ID 5114 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "g" ID 5115 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "h" ID 5116 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "j" ID 5117 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "k" ID 5118 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "l" ID 5119 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ";" ID 5120 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "'" ID 5121 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "z" ID 5122 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "x" ID 5123 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "c" ID 5124 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "v" ID 5125 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "b" ID 5126 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "n" ID 5127 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "m" ID 5128 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "," ID 5129 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "." ID 5130 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "-" ID 5131 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "/" ID 5132 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID 5200 AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop AUTO AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+
+	PUSHBUTTON "$" ID 5140 AT (1 10 11 12 )
+	PUSHBUTTON "€" ID 5141 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+	PUSHBUTTON "£" ID 5142 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "¥" ID 5143 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "[" ID 5144 AT (1 PrevBottom+1 PrevWidth PrevHeight)
+	PUSHBUTTON "]" ID 5145 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "{" ID 5146 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "}" ID 5147 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "<" ID 5148 AT (1 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON ">" ID 5149 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "\\" ID 5150 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "=" ID 5151 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "@" ID 5152 AT (1 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON "~" ID 5153 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "&" ID 5154 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "#" ID 5155 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "1" ID 5168 AT (52 1 17 15 ) FONT 2
+	PUSHBUTTON "2" ID 5169 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "3" ID 5170 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "4" ID 5171 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "5" ID 5172 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "6" ID 5173 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "7" ID 5174 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "8" ID 5175 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "9" ID 5176 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "(" ID 5177 AT (52 PrevBottom+1 PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON "0" ID 5178 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+	PUSHBUTTON ")" ID 5179 AT (PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 2
+
+	PUSHBUTTON "-" ID 5156 AT (109 10 11 12 )
+	PUSHBUTTON "+" ID 5157 AT (PrevRight+1 PrevTop PrevWidth PrevHeight)
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 24 PrevHeight ) GRAPHICAL BITMAPID 5203
+
+	PUSHBUTTON "/" ID 5159 AT (109 PrevBottom+1 11 PrevHeight)
+	PUSHBUTTON "*" ID 5160 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ":" ID 5161 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Tab" ID TabKey AT ( PrevRight+1 PrevTop PrevWidth PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "." ID 5163 AT (109 PrevBottom+1 PrevWidth PrevHeight )
+	PUSHBUTTON "," ID 5164 AT (PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 24 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "space" ID SpaceKey AT ( 109 PrevBottom+1 36 PrevHeight )
+	PUSHBUTTON "%" ID 5167 AT (PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID 5300 AT (2 KEYBOARD_TOP 156 78 )
+USABLE
+NOFRAME
+MODAL
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop AUTO AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	  PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "á" ID 5301 AT ( 1 1 12 13 )
+	PUSHBUTTON "à" ID 5302 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ä" ID 5303 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "â" ID 5304 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "å" ID 5305 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ã" ID 5306 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "æ" ID 5307 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ç" ID 5308 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ñ" ID 5309 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ø" ID 5310 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "é" ID 5311 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "è" ID 5312 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ë" ID 5313 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ê" ID 5314 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "í" ID 5315 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ì" ID 5316 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ï" ID 5317 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "î" ID 5318 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ß" ID 5319 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ý" ID 5320 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "ÿ" ID 5321 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "ó" ID 5322 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "ò" ID 5323 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ö" ID 5324 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ô" ID 5325 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "õ" ID 5326 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ú" ID 5327 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ù" ID 5328 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ü" ID 5329 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "û" ID 5330 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 20 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "¿" ID 5331 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "«" ID 5332 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID CapsAlphaKeyboardDialog AT (2 KEYBOARD_TOP 156 78 )
+MODAL
+USABLE
+NOFRAME
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop AUTO AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "Q" ID 5101 AT ( 1 1 12 13 )
+	PUSHBUTTON "W" ID 5102 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "E" ID 5103 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "R" ID 5104 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "T" ID 5105 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Y" ID 5106 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "U" ID 5107 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "I" ID 5108 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "O" ID 5109 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "P" ID 5110 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "A" ID 5111 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "S" ID 5112 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "D" ID 5113 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "F" ID 5114 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "G" ID 5115 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "H" ID 5116 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "J" ID 5117 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "K" ID 5118 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "L" ID 5119 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON ":" ID 5120 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "\"" ID 5121 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "Z" ID 5122 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "X" ID 5123 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "C" ID 5124 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "V" ID 5125 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "B" ID 5126 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "N" ID 5127 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "M" ID 5128 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "!" ID 5129 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "*" ID 5130 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 32 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "_" ID 5131 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "?" ID 5132 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+
+FORM ID CapsIntlKeyboardDialog AT (2 KEYBOARD_TOP 156 78 )
+USABLE
+NOFRAME
+MODAL
+DEFAULTBTNID KeyboardDoneButton
+BEGIN
+
+	BUTTON "Done" ID KeyboardDoneButton AT (KEYBOARD_DONE_LEFT KEYBOARD_DONE_TOP AUTO AUTO)
+	PUSHBUTTON "abc" ID Alpha_select AT (PrevRight+10 PrevTop AUTO AUTO) GROUP 2
+	PUSHBUTTON "123" ID Num_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	PUSHBUTTON "Int'l" ID Intl_select AT (PrevRight PrevTop PrevWidth AUTO) GROUP 2
+	  PUSHBUTTON "" ID CursorKeyUp AT ( 128 PrevTop-6 9 8) GRAPHICAL BITMAPID 5205
+	PUSHBUTTON "" ID CursorKeyDown AT ( PrevLeft PrevBottom+1 9 8 ) GRAPHICAL BITMAPID 5204
+	PUSHBUTTON "" ID CursorKeyRight AT ( 138 PrevTop 8 8) GRAPHICAL BITMAPID 5207
+	PUSHBUTTON "" ID CursorKeyLeft AT ( 119 PrevTop 8 8)  GRAPHICAL BITMAPID 5206
+	PUSHBUTTON "Á" ID 5301 AT ( 1 1 12 13 )
+	PUSHBUTTON "À" ID 5302 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ä" ID 5303 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Â" ID 5304 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Å" ID 5305 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ã" ID 5306 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Æ" ID 5307 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ç" ID 5308 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ñ" ID 5309 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ø" ID 5310 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+
+	PUSHBUTTON "Del" ID DeleteKey AT ( PrevRight+1 PrevTop 26 PrevHeight ) GRAPHICAL BITMAPID 5203
+	PUSHBUTTON "Tab" ID TabKey AT ( 1 PrevBottom+1 15 PrevHeight ) GRAPHICAL BITMAPID 5202
+
+	PUSHBUTTON "É" ID 5311 AT ( PrevRight+1 PrevTop 12 13 )
+	PUSHBUTTON "È" ID 5312 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ë" ID 5313 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ê" ID 5314 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Í" ID 5315 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ì" ID 5316 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ï" ID 5317 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Î" ID 5318 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "ß" ID 5319 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ý" ID 5320 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "Ÿ" ID 5321 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "cap" ID CapsKey AT ( 1 PrevBottom+1 19 PrevHeight )
+	PUSHBUTTON "Ó" ID 5322 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "Ò" ID 5323 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ö" ID 5324 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ô" ID 5325 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Õ" ID 5326 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ú" ID 5327 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ù" ID 5328 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight )
+	PUSHBUTTON "Ü" ID 5329 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "Û" ID 5330 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+
+	PUSHBUTTON "Ret" ID ReturnKey AT ( PrevRight+1 PrevTop 18 PrevHeight ) GRAPHICAL BITMAPID 5201
+
+	PUSHBUTTON "shift" ID ShiftKey AT ( 1 PrevBottom+1 30 PrevHeight )
+	PUSHBUTTON "space" ID SpaceKey AT ( PrevRight+1 PrevTop 98 PrevHeight )
+	PUSHBUTTON "¡" ID 5331 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+	PUSHBUTTON "»" ID 5332 AT ( PrevRight+1 PrevTop 12 PrevHeight )
+END
+#endif
+NAVIGATION ID 1000
+INITIALSTATE 1
+BEGIN
+ ID 2000 ABOVE 2001
+ ID 2001 ABOVE 2002
+ ID 2002 ABOVE 1101
+ ID 1101 BELOW 2002 SKIP
+END
+
+ALERT ID 1700
+	INFORMATION
+BEGIN
+	TITLE TERM_NOT_FOUND
+	MESSAGE END_OF_DOCUMENT_REACHED
+	BUTTONS OK
+END
+ALERT ID 1703
+        ERROR
+BEGIN
+        TITLE "Palm OS Version Error"
+        MESSAGE "SiEd requires at least PalmOS 3.5 to run."
+        BUTTONS "Exit"
+END
+ALERT ID 1793
+	ERROR	
+BEGIN
+	TITLE FILE_TRUNCATION
+	MESSAGE FILE_TRUNCATION_TEXT
+	BUTTONS OK
+END
+ALERT ID 1709
+	ERROR
+BEGIN
+	TITLE FILE_TOO_LARGE
+	MESSAGE FILE_TOO_LARGE_TEXT
+	BUTTONS OK
+END
+ALERT ID 3001
+	ERROR
+BEGIN
+	TITLE INVALID_FILE_NAME_TITLE
+	MESSAGE INVALID_FILE_NAME_TEXT
+	BUTTONS OK
+END
+ALERT ID 6004
+	ERROR
+BEGIN
+	TITLE FILE_NOT_ENCRYPTED_TITLE
+	MESSAGE FILE_NOT_ENCRYPTED_TEXT
+	BUTTONS OK
+END
+
+ALERT ID 1713
+	ERROR
+BEGIN
+	TITLE MUST_ENTER_NAME_TITLE
+	MESSAGE MUST_ENTER_NAME_TEXT
+	BUTTONS OK
+END
+
+ALERT ID 1702
+	INFORMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE OVERWRITE_FILE
+	MESSAGE OVERWRITE_FILE_TEXT
+	BUTTONS OVERWRITE CANCEL
+END
+
+ALERT ID 1701
+	INFORMATION
+BEGIN
+	TITLE UNABLE_TO_UNDO
+	MESSAGE UNABLE_TO_UNDO_TEXT
+	BUTTONS OK
+END
+ALERT ID 1711
+	ERROR
+BEGIN
+	TITLE UNABLE_TO_CREATE_DIR_TITLE
+	MESSAGE UNABLE_TO_CREATE_DIR_TEXT
+	BUTTONS OK
+END
+ALERT ID 1712
+	ERROR
+BEGIN
+	TITLE NO_COMPRESSED_DOC_TITLE
+	MESSAGE NO_COMPRESSED_DOC_TEXT
+	BUTTONS OK
+END
+
+ALERT ID 1001
+	ERROR
+BEGIN
+	TITLE TEXT_FILE_NOT_FOUND
+	MESSAGE MESSAGE_FILE_NOT_FOUND
+	BUTTONS OK
+END
+ALERT ID 1600
+	ERROR
+BEGIN
+	TITLE TEXT_DATABASE_ACCESS_ERROR
+	MESSAGE MESSAGE_DATABASE_ACCESS_ERROR
+	BUTTONS OK
+END
+
+ALERT ID 1040
+	ERROR
+BEGIN
+	TITLE TEXT_FILE_ACCESS_ERROR
+	MESSAGE MESSAGE_FILE_ACCESS_ERROR
+	BUTTONS OK
+END
+
+ALERT ID 2011
+	ERROR
+BEGIN
+	TITLE TEXT_SCREEN_ACCESS_ERROR
+	MESSAGE MESSAGE_SCREEN_ACCESS_ERROR
+	BUTTONS OK
+END
+
+ALERT ID 1004
+	ERROR
+BEGIN
+	TITLE TEXT_UNABLE_TO_SAVE
+	MESSAGE MESSAGE_UNABLE_TO_SAVE
+	BUTTONS OK
+END
+ALERT ID 2901
+	ERROR
+BEGIN
+	TITLE TEXT_SELECTION_COPY_TRUNCATED
+	MESSAGE MESSAGE_SELECTION_COPY_TRUNCATED
+	BUTTONS OK
+END
+
+ALERT ID 2600
+	INFORMATION
+BEGIN
+	TITLE TEXT_DEBUG_MESSAGE
+	Message "^1."
+	BUTTONS OK
+END
+
+
+ALERT ID 1010
+	CONFIRMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE CONFIRM_FILE_DELETE
+	MESSAGE MESSAGE_CONFIRM_FILE_DELETE
+	BUTTONS DELETE CANCEL
+END
+
+ALERT ID 1019
+	CONFIRMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE CONFIRM_MACRO_DELETE
+	MESSAGE MESSAGE_CONFIRM_MACRO_DELETE
+	BUTTONS DELETE CANCEL
+END
+
+ALERT ID 1400
+	CONFIRMATION
+	DEFAULTBUTTON 0
+BEGIN
+	TITLE CONFIRM_OVERWRITE
+	MESSAGE MESSAGE_CONFIRM_OVERWRITE
+	BUTTONS SAVE DISCARD
+END
+
+ALERT ID 1060
+	ERROR
+BEGIN
+	TITLE TEXT_OUT_OF_MEMORY
+	MESSAGE MESSAGE_OUT_OF_MEMORY
+	BUTTONS OK
+END
+
+ALERT ID 1011
+	INFORMATION
+BEGIN
+	TITLE SIED_VERSION
+	MESSAGE COPYRIGHT_MESSAGE
+	BUTTONS OK
+END
+
+ALERT ID 2506
+	INFORMATION
+BEGIN
+	TITLE "Benchmark Result"
+	Message "Time: ^1"
+	BUTTONS OK
+END
+
+ALERT ID 1050
+	CONFIRMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE NEW_FILE
+	MESSAGE MESSAGE_NEW_FILE
+	BUTTONS YES NO
+END
+ALERT ID 1051
+	CONFIRMATION
+BEGIN
+	TITLE REVERT_FILE
+	MESSAGE MESSAGE_REVERT_FILE
+	BUTTONS YES NO
+END
+
+FORM ID 2500 AT ( 2 25 156 133 )
+	FRAME
+	USABLE
+	MODAL
+	SAVEBEHIND
+	DEFAULTBTNID 2504
+BEGIN
+	TITLE EDITOR_PREFERENCES
+	LABEL TEXT_FONT AUTOID AT ( 4 12 )  FONT 1
+
+	PUSHBUTTON " " ID 2601 AT ( 4 PrevBottom+1 12 16) GROUP 1
+	PUSHBUTTON " " ID 2602 AT (PrevRight+1 PrevTop PrevWidth  PrevHeight) GROUP 1
+	PUSHBUTTON " " ID 2603 AT (PrevRight+1 PrevTop PrevWidth PrevHeight) GROUP 1
+	PUSHBUTTON " " ID 2604 AT (PrevRight+1 PrevTop PrevWidth  PrevHeight) GROUP 1
+
+	PUSHBUTTON "A" ID 2505 AT (4 PrevBottom+1 PrevWidth  PrevHeight) FONT 0 GROUP 1
+	PUSHBUTTON "A" ID 2506 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight ) FONT 1 GROUP 1
+	PUSHBUTTON "A" ID 2507 AT ( PrevRight+1 PrevTop PrevWidth PrevHeight) FONT 2 GROUP 1
+	PUSHBUTTON "A" ID 2508 AT ( PrevRight+1 PrevTop PrevWidth  PrevHeight ) FONT 7 GROUP 1
+
+	PUSHBUTTON " " ID 2609 AT ( 4 PrevBottom+1 PrevWidth  PrevHeight ) GROUP 1 NONUSABLE
+	PUSHBUTTON " " ID 2610 AT ( PrevRight+1 PrevTop PrevWidth  PrevHeight ) GROUP 1 NONUSABLE
+	PUSHBUTTON " " ID 2611 AT ( PrevRight+1 PrevTop PrevWidth  PrevHeight ) GROUP 1 NONUSABLE
+	PUSHBUTTON " " ID 2612 AT ( PrevRight+1 PrevTop PrevWidth  PrevHeight ) GROUP 1 NONUSABLE
+
+	LABEL SELECTION_MODE AUTOID AT ( PrevRight+20 13) FONT 1
+	POPUPTRIGGER SELECTION_MODE ID 3007 AT (PrevLeft PrevBottom+2 AUTO AUTO) FONT 0
+	LIST PALM_STYLE_TEXT STANDARD_STYLE_TEXT ID 3009 AT ( PrevLeft PrevTop PrevWidth 22) NONUSABLE DISABLED FONT 0
+	POPUPLIST ID 3007 3009
+	LABEL DEFAULT_TEXT_EDITOR 3020 AT (PrevLeft PrevBottom-4) FONT 1
+	POPUPTRIGGER DEFAULT_TEXT_EDITOR ID 3017 AT (PrevLeft PrevBottom+2 AUTO AUTO) FONT 0
+
+	LIST ID 3019 AT ( PrevLeft PrevTop PrevWidth 22) NONUSABLE DISABLED FONT 0
+	POPUPLIST ID 3017 3019
+	LABEL SHOW_CODES_TEXT AUTOID AT ( 2 77)  FONT 1
+	LIST NONE_TEXT EOL_TEXT ID 3013 AT ( PrevLeft PrevBottom+2 AUTO 22) NONUSABLE DISABLED FONT 0
+	POPUPTRIGGER SHOW_MODE ID 3012 AT (PrevLeft PrevTop PrevWidth AUTO) FONT 0
+	POPUPLIST ID 3012 3013
+	
+	LABEL INCREMENTAL_FILE_OPEN_MODE AUTOID AT (2 PrevBottom+2) FONT 1
+	POPUPTRIGGER MEDIUM_CHUNK_TEXT ID 3095 AT (PrevLeft PrevBottom PrevWidth AUTO) FONT 0
+	LIST SMALL_CHUNK_TEXT MEDIUM_CHUNK_TEXT LARGE_CHUNK_TEXT OFF_CHUNK_TEXT ID 3094 AT (PrevLeft PrevTop 60 44) NONUSABLE DISABLED FONT 0
+
+	POPUPLIST ID 3095 3094
+	BUTTON OK ID 2503 AT (112 PrevTop-20 38 12 ) BOLDFRAME
+	BUTTON CANCEL ID 2504 AT (PrevLeft PrevBottom+4 38 12)
+END
+
+
+FORM ID 2510 AT (2 74 156 84)
+	FRAME
+	USABLE
+	MODAL
+	SAVEBEHIND
+	DEFAULTBTNID 2513
+BEGIN
+	TITLE RENAME_FILE
+	GRAFFITISTATEINDICATOR AT (148 75 )
+	LABEL OLD_FILENAME AUTOID AT (3 12)
+	FIELD ID 2514 AT (8 25 145 12) MAXCHARS 31 NONEDITABLE
+	LABEL NEW_FILENAME AUTOID AT (3 PrevBottom+2)
+	FIELD ID 2511 AT (8 PrevBottom+2 145 12) MAXCHARS 31 UNDERLINED USABLE EDITABLE
+	BUTTON OK ID 2512 AT (45 PrevBottom+3 AUTO AUTO) BOLDFRAME
+	BUTTON CANCEL ID 2513 AT (PrevRight+3 PrevTop AUTO AUTO)
+END
+
+FORM ID 3002 AT ( 2 70 156 89)
+	FRAME
+	USABLE
+	MODAL
+	SAVEBEHIND
+	DEFAULTBTNID 3005
+BEGIN
+	TITLE TEXT_DOCUMENT_STATISTICS
+	LABEL TEXT_DOCUMENT_CHARS AUTOID AT ( 5 13 )
+	LABEL TEXT_DOCUMENT_WORDS AUTOID AT ( 5 PrevBottom+3 )
+
+	LABEL TEXT_DOCUMENT_ALPHA_CHARS_1 AUTOID AT ( 5 PrevBottom+3 )
+	LABEL TEXT_DOCUMENT_ALPHA_CHARS_2 AUTOID AT ( 5 PrevBottom+3 )
+
+	BUTTON TEXT_CALCULATE ID 3004 AT (40 PrevBottom+4 AUTO AUTO )
+	BUTTON CLOSE ID 3005 AT (PrevRight+5 PrevTop AUTO AUTO )
+
+END
+
+FORM ID 5002 AT ( 2 102 156 56)
+	FRAME
+	USABLE
+	MODAL
+	DEFAULTBTNID 5005
+	SAVEBEHIND
+BEGIN
+	TITLE NEW_DIRECTORY
+	GRAFFITISTATEINDICATOR AT (148 47)
+	LABEL TEXT_NEW_DIRECTORY AUTOID AT (5 13)
+	FIELD ID 5003 AT (PrevLeft PrevBottom+2 145 12) MAXCHARS 31 UNDERLINED
+	BUTTON OK ID 5004 AT (47 PrevBottom+4 AUTO AUTO) BOLDFRAME
+	BUTTON CANCEL ID 5005 AT (PrevRight+2 PrevTop AUTO AUTO)
+END
+FORM ID 5202 AT ( 2 75 156 83)
+	FRAME
+	USABLE
+	MODAL
+	DEFAULTBTNID 5205
+	SAVEBEHIND
+BEGIN
+	TITLE GET_PASSWORD
+	GRAFFITISTATEINDICATOR AT (148 47)
+	LABEL FILE_LOCATION AUTOID AT (3 13)
+	FIELD ID 5214 AT (PrevLeft+2 PrevBottom+1 157 12) NONEDITABLE MAXCHARS 255
+	LABEL PASSWORD_TEXT AUTOID AT (3 PrevBottom)
+	FIELD ID 5203 AT (PrevLeft+2 PrevBottom+2 145 12) MAXCHARS 16 UNDERLINED
+	BUTTON OK ID 5204 AT (47 PrevBottom+4 AUTO AUTO) BOLDFRAME
+	BUTTON CANCEL ID 5205 AT (PrevRight+2 PrevTop AUTO AUTO)
+END
+FORM ID 1002 AT ( 2 2 156 156 )
+        MENUID 1300
+	FRAME
+	USABLE
+	MODAL
+	DEFAULTBTNID 1006
+BEGIN
+	TITLE SELECT_FILE
+	GRAFFITISTATEINDICATOR AT (148 148)
+	FIELD ID 3006 AT ( 5 12 145 12) MAXCHARS 45 NONEDITABLE
+	FIELD ID 3003 AT ( 2 143 FILE_LIST_WIDTH 12 ) UNDERLINED MAXCHARS 31
+	LIST TEXT_NONE ID 1003 AT ( 2 25 FILE_LIST_WIDTH 110 )
+
+
+	BUTTON NEW_DIRECTORY ID 1008 AT (PrevRight+4 63 FILE_BUTTON_WIDTH AUTO) NONUSABLE
+	CHECKBOX TEXT_ENCRYPTED ID 5207 AT (PrevLeft-3 PrevBottom+2 AUTO AUTO) NONUSABLE
+	BUTTON DELETE ID 5009 AT (PrevLeft+3 PrevTop FILE_BUTTON_WIDTH AUTO) NONUSABLE
+	BUTTON DECRYPT ID 5008 AT (PrevLeft PrevBottom+2 PrevWidth PrevHeight) NONUSABLE
+	BUTTON RENAME ID 1007 AT (PrevLeft PrevBottom+2 PrevWidth PrevHeight ) NONUSABLE
+	BUTTON OPEN ID 1005 AT ( PrevLeft PrevBottom+2 PrevWidth PrevHeight) BOLDFRAME
+	BUTTON CANCEL ID 1006 AT (PrevLeft PrevBottom+2 PrevWidth PrevHeight)
+
+END
+FORM ID 1099 AT ( 2 2 156 156 )
+	FRAME
+	SAVEBEHIND
+	USABLE
+	MODAL
+	DEFAULTBTNID 1096
+BEGIN
+	TITLE START_RECORD
+	GRAFFITISTATEINDICATOR AT (148 148)
+	LIST TEXT_NONE ID 1098 AT ( 1 14 FILE_LIST_WIDTH 126 )
+	BUTTON RECORD ID 1094 AT (PrevRight+4 100 AUTO AUTO) BOLDFRAME
+	BUTTON DELETE ID 1097 AT (PrevLeft PrevBottom+2 PrevWidth AUTO)
+	BUTTON CANCEL ID 1096 AT (PrevLeft PrevBottom+2 PrevWidth AUTO )
+	FIELD ID 1095 AT ( 1 PrevBottom+3 MACRO_LIST_WIDTH 12 ) UNDERLINED MAXCHARS 40
+END
+
+MENU ID 1200
+	BEGIN
+		PULLDOWN TEXT_FILE
+		BEGIN
+			MENUITEM TEXT_NEW ID 1206 "N"
+			MENUITEM OPEN ID 1207 "O"
+			MENUITEM SAVE ID 1205 "V"
+			MENUITEM SAVE_AS ID 1204 "W"
+			MENUITEM REVERT ID 1227
+			MENUITEM MANAGE_FILES 1224 "M"
+			MENUITEM CLOSE ID 1599
+			MENUITEM "-" AUTOID
+			MENUITEM PLAY_MACRO ID 1299
+			MENUITEM START_RECORD ID 1399
+			MENUITEM STOP_RECORD_MENU ID 1499
+			MENUITEM "-" AUTOID
+			#ifdef REPORT_MEM_USAGE
+			MENUITEM "Mem Usage" ID 1600
+			#endif
+
+			MENUITEM TEXT_ABOUT ID 1208
+		END
+		PULLDOWN TEXT_EDIT
+		BEGIN
+			MENUITEM TEXT_COPY ID 1201 "C"
+			MENUITEM TEXT_PASTE ID 1202 "P"
+			MENUITEM TEXT_CUT ID 1203 "X"
+			MENUITEM SELECT_ALL ID 3010 "S"
+			MENUITEM "-" AUTOID
+			MENUITEM TEXT_UNDO ID 1212 "Z"
+			MENUITEM TEXT_REDO ID 1219 "D"
+			MENUITEM "-" AUTOID
+			MENUITEM TEXT_REPLACE ID 1217 "F"
+			MENUITEM FIND_AGAIN  ID 1216 "G"
+			MENUITEM INC_SEARCH_TEXT ID 1397 "I"
+			MENUITEM "-" AUTOID
+			MENUITEM KEYBOARD ID 1297
+
+			
+		END
+		PULLDOWN TEXT_CURSOR
+		BEGIN
+			MENUITEM TEXT_END ID 1209 "E"
+			MENUITEM TEXT_HOME ID 1210 "A"
+			MENUITEM END_OF_DOCUMENT ID 1213 "L"
+			MENUITEM START_OF_DOCUMENT ID 1214 "B"
+			MENUITEM "-" AUTOID
+			MENUITEM DELETE_LINE ID 1211 "K"
+			MENUITEM "-" AUTOID
+			MENUITEM QUICK_MACRO ID 1296 "Q"
+		END
+		PULLDOWN TEXT_VIEW
+		BEGIN
+			MENUITEM SPLIT_VIEW ID 1221 "T"
+			MENUITEM UNSPLIT_VIEW ID 1222 "U"
+			MENUITEM "-" AUTOID
+			MENUITEM MENU_TEXT_STATS ID 1223
+			MENUITEM PREFERENCES_ABBR ID 1218 "R"
+			MENUITEM READ_ONLY_MODE ID 1283
+		
+			#ifdef COLLECT_STATISTICS
+			MENUITEM "Cache Stats" ID 1999
+			MENUITEM "Benchmark" ID 2999
+
+			#endif
+	#ifdef TEST_OBJECTS
+	MENUITEM "Toggle screen" ID 3999
+	#endif
+		END
+	END
+
+
+MENU ID 1300
+       BEGIN
+       PULLDOWN TEXT_BEAM
+               BEGIN
+                        MENUITEM BEAM_FILE ID 1300 "F"
+                        MENUITEM BEAM_APP  ID 1305 "A"
+                END
+        END
+
+ALERT ID 1950
+	CONFIRMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE CLOSE_TITLE
+	MESSAGE CLOSE_TEXT
+	BUTTONS CLOSE CANCEL
+END
+ALERT ID 1951
+	CONFIRMATION
+	DEFAULTBUTTON 1
+BEGIN
+	TITLE CLOSE_TITLE_SAVED
+	MESSAGE CLOSE_TEXT_SAVED
+	BUTTONS CLOSE CANCEL
+END
