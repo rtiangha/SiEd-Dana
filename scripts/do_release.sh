@@ -3,7 +3,7 @@
 # Build script to compile all language versions of SiEd-Dana from the Master
 # branch on GitHub.
 #
-# USAGE:  do_release <version number>
+# USAGE:  do_release.sh [version number]
 #
 
 function make_release()
@@ -20,7 +20,7 @@ function make_release()
 
 if [ "$#" -ne 1 ]
 then
-	echo -e "\nERROR - Usage:  do_release <release version number>\n"
+	echo -e "\nERROR - Usage:  do_release.sh [release version number]\n"
 else
 	cd /tmp
 	git clone https://github.com/rtiangha/SiEd-Dana.git
