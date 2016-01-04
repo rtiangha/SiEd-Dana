@@ -1,6 +1,10 @@
 /*
- * SiEd - A text editor for PalmOS 3.5+ Copyright (C) 2003 Benjamin Roe
- * Contact Email:ben@benroe.com
+ * SiEd-Dana - A text editor optimized for the AlphaSmart Dana.
+ * Copyright (C) 2016 Reg Tiangha
+ * Contact:  reg@reginaldtiangha.com
+ *
+ * Portions of SiEd-Dana are based off the original SiEd project,
+ * Copyright (C) 2003-2005 Benjamin Roe
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the

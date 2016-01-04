@@ -1,0 +1,832 @@
+----------------------------------------
+Release 0.10.0_beta3 27th April 2005
+----------------------------------------
+
+- Editor: Fix crash on font change
+- Editor: Improve preferences handling and reduce storage usage
+
+----------------------------------------
+Release 0.10.0_beta2 10th April 2005
+----------------------------------------
+
+- Editor: Merge new scrollbar and draggable "split view" position from dev branch
+- Display: speed optimisations in redraw: 5-10% faster in editing
+- Display: Register for dynamic input area and respond to resize requests
+- Editor: Fix bug in incremental loading that could lead to unwrapped lines at end of document
+- Editor: Add copy and paste buttons
+- Dialogs: Add "Internal memory" divider in file dialog to make it clear where files are being saved
+- Translations: Merge improved Catalan translation (palmcat.org)
+
+----------------------------------------
+Release 0.9.11 5th March 2005
+----------------------------------------
+	
+- Dialogs: Correctly cancel "open and discard changes" if user taps
+	cancel on save as dialog, rather than discarding changes still
+- Editor: Prevent accidental double tap preventing drag-selecting text
+- Editor: Added read only mode and detection of read only files
+- Editor: Fix cursor movement over start of line (regression in 0.9.9)
+	
+----------------------------------------
+Release 0.9.11_beta1 3rd March 2005
+----------------------------------------
+- Files: Only save file when opening existing file if current file is dirty
+- Files: Fix truncation of some DOC files on opening/saving
+- Testing: Extended unit testing further
+
+----------------------------------------
+Release 0.9.10 27th February 2005
+----------------------------------------
+- Dialogs: Update Russian version virtual keyboard
+
+----------------------------------------
+Release 0.9.10_beta1 21th February 2005
+----------------------------------------
+- Display: Fix incorrect clearing of deleted text at end of document
+- Dialogs: Don't accept invalid filenames in save dialog
+- Editor: Fix cursor movement at start of document
+- Editor: Correct inconsistent white space word wrapping
+	
+----------------------------------------
+Release 0.9.9 20th February 2005
+----------------------------------------
+
+- Display: Fix cursor display with small fonts
+- Display: Enable CorrectCharsWidth cache
+- Dialog: Set font correctly after cancelling preferences dialog
+- Files: Don't popup compressed DOC file warning when checking for file
+encryption
+- Editor: Enable cache for get_char() - approx 8% perf improvement in typing
+- Editor: Fix remaining signed/unsigned confusion
+- Tests: Add more extensive unit tests
+- General: Fix warnings given by -pedantic and -Wshadow
+- Translations: updated German translation from Markus Giebeler and updated
+French translation from David Bosman
+
+----------------------------------------
+Release 0.9.8 6th February 2005
+----------------------------------------
+- Dialogs: Reset font correctly after exiting preferences dialog
+
+----------------------------------------
+Release 0.9.7 4th February 2005
+----------------------------------------
+
+- Display: Stop cursor ghosting when using incremental file open
+
+----------------------------------------
+Release 0.9.7_beta1 2nd February 2005
+----------------------------------------
+
+- Dialogs: New SD-card icon
+- Dialogs: Draw VFS volumes in dialogs in bold
+- Dialogs: Add encrypted file icon
+- Dialog: Add open file button to file dialog and only show decrypt button when encrypted file selected
+- Display: Use colours where supported for cursor and UI elements
+- Display: Show Please wait on replace all
+- Display: Clear last line correctly when deleted
+- Editor: Handle ctrl-delete over newline correctly
+- Editor: New Macro icon
+- Editor: Read preferences for bottom editor on split screen
+- Editor: Add additional fonts (fonts taken from Plucker source code)
+- Editor: Draw minibuffer cursor on first displaying incremental search
+- Editor: Make sure cursor is visible on displaying onscreen keyboard
+- Editor: Add tap on filename to display open dialog
+- Editor: Fix rare word wrap bug with some fonts and space characters
+- Editor: Add alphanumeric character count and improve statistics dialog
+- Edior: Fix crash on pasting >32Kb of text
+
+----------------------------------------
+Release 0.9.6 25th January 2005
+----------------------------------------
+	
+- Files: Correct sort algorithm and reduce memory usage
+- Display: Redraw screen properly on page up at start of document
+- Display: Redraw cursor correctly at end of document
+- Display: Clear selection before doing replace in find/replace dialog to prevent incorrect cursor drawing
+- Editor: Reduce battery usage by correctly waiting forever in event loop!
+- Editor: minor optimisations reduce CPU usage
+	
+----------------------------------------
+Release 0.9.5a 18th January 2005
+----------------------------------------
+
+- Editor: Re-enable encryption
+
+----------------------------------------
+Release 0.9.5 18th January 2005
+----------------------------------------
+
+- Editor: Replace Int16 with UInt32 in receive exchange data and cope with >
+64Kb data
+
+----------------------------------------
+Release 0.9.4 18th January 2005
+----------------------------------------
+
+- Editor: Remove incorrect menu id in popup_menu causing crash
+- Editor: Fix unallocated memory access in unsplit screen
+- Editor: Add text/plain mime-type support and GoTo Exchange Manager support
+- Editor: Add Control key+arrow key moves cursor a word at a time
+- Editor: Fix rare bug in word wrapping causing incorrect wrapping
+- Editor: Fix rare word-wrapping crash by disabling character width cache (which was useless anyway)
+- Editor: Handle out of memory errors properly on resizing a chunk
+- Editor: Improve unit tests
+- Editor: Add Home/End key support for external keyboards
+- Display: Remove uneccessary redrawing of text when displaying keyboard
+- Display: Remove uneccessary display of "please wait..." on startup
+- Display: Only redraw display once on scroll page up/down
+- Display: Clear screen properly on insert new line
+- Files: Fix encryption truncating files
+- Dialogs: Move find/replace dialog buttons to prevent shift indicator overwriting the exit button
+- Dialogs: Add default editor selector
+	
+----------------------------------------
+Release 0.9.3 24th December 2004
+----------------------------------------
+- Dialogs: Clear screen correctly when displaying find dialog with screen split
+- Dialogs: Move bottom editor when keyboard open to allow onscreen keyboard to work on bottom editor
+- Dialogs: Automatically copy selected text into find/replace fields
+- Files: Fix another off by-one error in incremental file opening
+- Editor: Remember focused editor over app restart
+- Editor: Speed up app start up with split screen open
+- Display: clear selection properly when scrolling so as not to leave ghost trails
+- Display: Set clipping rectangle correctly in split screen mode (off by one
+error)
+- Translations: Add Czech(Benda Radek) and improved Russian(Ilchenko Denis) translations. Fix dialog positioning errors in Italian version
+
+----------------------------------------
+Release 0.9.2 1st December 2004
+---------------------------------------
+- Editor: Set scrollbar correctly on startup when onscreen keyboard enabled
+
+----------------------------------------
+Release 0.9.1 30th November 2004
+---------------------------------------
+
+- Dialogs: Clear field contents on file select in save dialog
+- Dialogs: Improve Find/replace dialog and allow cursor movement and scrolling while it's displayed
+- Display: Fix redrawing of tabs and removed lines at end of document
+- Display: Remove unnecessary redrawing to reduce processor usage
+- Editor: Save window position on exit
+- Editor: Update line counter on delete lines when using incremental file opening
+- Editor: Save keyboad dialog status over application exit
+- Editor: Make find/replace dialog not found message non-modal
+- Editor: Do find on pressing return with find dialog open
+- Editor: Fix off-by one error in incremental file opening 
+- Translations: Merge Polish (by Jurek Blaszczynski) and Swedish (by Karl Jonsson) translations and improve German (Wolfgang Schneider)
+	
+------------------------------------------
+Release 0.9.0 7th November 2004
+------------------------------------------
+
+- Dialogs: Stop directory name redrawing over menu
+- Preferences: Reset font correctly on change when view split
+- Display: Fix rendering with multibyte characters
+- Display: Fix incorrect cursor position redraw on deleting selection
+- Display: Fix bad status bar drawing with small fonts hack 
+- Display: Increase position jump list width
+- Display: Clear cursor correctly when undoing with an active selection
+- Display: Remove unneccessary screen redraws
+- Display: Clear screen correctly on text deletion for all fonts
+- Display: make tabs one pixel wider to correct drawing problem
+- Editor: Use seperate heap for undo to improve performance of large changes and reduce memory fragmentation
+- Editor: Allow graffiti with keyboard open
+- Editor: Handle deleting selections correctly with keyboard open
+- Editor: Fix multiple nasty undo bugs - oops.
+- Editor: Add background opening of files
+- Editor: Move Prefs and Stats menu options to view menu
+- Editor: Add Close without saving action
+- Editor: Fix handling of empty lines at end of document
+- Files: Remove arbitrary 100Kb file limit
+- Files: Fix crash on opening doc files with bookmarks and prevent saving files overwriting bookmarks
+- Files: Add more robust error handling in case of corrupt files or file IO errors
+- Files: Fix memory leak on cancelling password dialog
+- Files: Drop obsolete SiEd file format support - allow DOC or TXT only now. Nobody in their right mind can actually be using 0.4.0, can they?
+- General: reorganise source code files, seperate build directory
+- Memory Manager: Reduce memory defragmentation
+- Memory Manager: Handle Out of Memory robustly
+- Memory Manager: Fix minor bugs and improve efficiency
+- Memory Manager: Additional debugging code and tests
+
+---------------------------------------------
+Release 0.8.5 17th September 2004
+---------------------------------------------
+
+- Editor: Make page up/down actually scroll rather than just moving cursor
+- Editor: Make word count count words split by punctuation as separate words
+- Display: Prevent occasional pixels not being cleared problems on deleting
+text
+- Display: Fix status bar drawing when using small font hack
+- Display: Improve status bar filename and macro recording display
+- Texthandler: Fix incorrect cursor positioning error in rare case deleting text at end
+of line
+- Texthandler: Improve performance of word wrapping by around 10%
+- Texthandler: make wrapping consistent backwards and forwards
+- Files: 5-10% performance improvement in file opening
+- Translations: Update Norwegian translation (John Gothard)
+- Translations: Update French translation (David Bosman)
+- Translations: Improve control positioning in translated versions
+
+---------------------------------------------
+Release 0.8.4 3rd September 2004
+---------------------------------------------
+- Editor: Stop replace dialog drawing search terms before displayed
+- Editor: Add incremental search
+- Editor: Save as dialog uses first line of text as guess for filename
+- Display: Fix end of line display corruption on delete
+- Files: Add filename to delete file dialog
+- Files: Improve file performance by 10-15%
+- Translations: Updated Catalan translation from palmcat merged and Catalan UI
+sizes fixed
+- Memory manager: fixed memory leak in resize chunk
+
+---------------------------------------------
+Release 0.8.3 17th August 2004
+---------------------------------------------
+- Files: Improve file opening speed by 15-20%
+- Files: Improve Decryption file by creating a copy instead of overwriting original file
+- Files: Muliple cosmetic file dialog bug fixes
+- Display: fixed last pixel width of wide letters being removed by EOL chars
+- Display: Fixed redraw problems on word wrap backwards
+- Text: Fix wrapping bug
+- Text: Fix obscure chunk resize bug causing problems in replace all
+- Text: Fix incorrect chunk resize causing memory leak in memory handler
+- Editor: Fix Replace bug
+- Editor: Improve replace behaviour
+- Editor: merge find and replace dialogs
+- Testing: Add extensive unit testing code
+
+---------------------------------------------
+Release 0.8.3_beta1 to testers 11th August 2004
+---------------------------------------------
+
+- Editor: Fix incorrect cursor positioning on replace next
+- Text: Fix incorrect word wrapping and cursor positioning with very long words
+- Editor: Add keyboard option to edit menu
+- Editor: Fix PalmOS 3.5 crash due to long string in about box
+- Editor: Fix possible crash after deleting line
+- Editor: Remember replace and find text for replace dialog
+- Translations: Updated Catalan, French and German translations
+
+- General: code tidy ups
+
+---------------------------------------------
+Release 0.8.2 31st July 2004
+---------------------------------------------
+
+- Editor: Reduced max file size to 100k to ensure stability
+- Editor: Handle failure to open large files dues to OOM more gracefully
+- Editor: Fixed replace redraw and match case not working bugs
+- Editor: Handle delete line on empty lines properly
+- Editor: Fixed cancelled save as setting document clean flag
+- Editor: Set safe default buttons for all dialogs to avoid data loss on exit
+- Editor: Add "from top" option to find/replace
+- Editor: Put previously searched for text in find/replace text field
+- Editor: Fixed crash on deleting entire document
+- Filedialog: Draw current directory text on save/open dialogs at correct time
+- TextHandler: Fix slow pasting problem
+- Doc file handler:ignore bookmark records
+- Display: Give action buttons (OK, Open, Find etc) a bold frame
+- Translations: added Russian and Turkish translations. MUCH TRANSLATION TIDYING WORK STILL NEEDED!
+
+---------------------------------------------
+First Beta release to testers 0.8.2 21st July 2004
+---------------------------------------------
+
+- Doc file: Fix resizing bug causing garbage at end of file on file shrink
+- Editor: Add percentage location jump popup to line number
+- Editor: Shift preferences into seperate class
+- Editor: Shift global event handling into separate class to tidy up main.cc
+- Editor: Only redraw display when necessary after dialog display
+- Editor: Improved selection of text, especially at start of line
+- Editor: Added command icons to command bar popup (copy/cut/paste)
+- Editor: Added Reload command to allow abandoning changes
+- Display: Use OS defined colours for selected text and cursor
+- Display: Fix scrolling display corruption at end of document while selecting
+- Display: Tidied up status bar further
+- Display: Redraw screen correctly after deleting large amounts of text
+- Filehandler: Fix various file saving bugs - reduce unnecessary file access, save on new file
+- Texthandler: Fix undo cursor positioning bug and memory leak
+- Texthandler: Fix undo wrong order bug (amazed no one noticed this!)
+
+---------------------------------------------
+Release 0.8.0 25th June 2004
+---------------------------------------------
+
+- Editor: tapping on file dirty asterisk saves file
+- Editor: Double tapping selects word
+- Dialogs: Tidy edge of screen control placement on file dialogs
+- Display: Fix scrollbar redraw problems
+- Display: Add "Show line feeds" option
+- Display: Use notification system between document and textview to speed up redraws
+- Display: Improve Please Wait... message
+- Texthandler: 	Speed up deleting larges amount of selected text by deleting from end of selection
+		to start
+- Macro: Prevent macro recorder recording taps to avoid filling up buffer with uneccesary events
+- General: Tidying code
+- Editor: Function key + Cursor Arrows selects text. Warning - doesn't work properly with all keyboards on Graffiti 2 devices due to an 'issue' with the keyboard drivers.
+
+---------------------------------------------
+Release 0.7.2 28th May 2004
+---------------------------------------------
+
+- Macro: Redraw macro list selections correctly after deleting macro
+- Texthandler: Split line handling off into separate document class
+- Texthandler: Reduce memory usage by removing debug code left behind
+- Texthandler: refactor - remove (circular) references to editor class
+- Filehandler/editor: move all file related code into filehandler
+- Filehandler: Refactor file access code
+- Editor: fix memory leak due to not freeing undo history on opening file
+- Textview: Remove uneccesary redraws of filename display
+- Testing code: added unit tests for texthandler, editor and document classes
+- Encryption: Fix brain dead error in header reading that prevented encryption working
+- Display: Move status line up one pixel to avoid grafitti indicator
+
+---------------------------------------------
+Release 0.7.0a 10th May 2004
+---------------------------------------------
+- Doc file interface: unlock record after reading header
+
+---------------------------------------------
+Release 0.7.0 9th May 2004
+---------------------------------------------
+
+- Editor: Virtual keyboard support added
+- Editor: Macro recorder added
+- Editor: Fixed memory leak after opening new file after using Find
+- Editor: Fixed Incorrect scratch file handling
+- Editor: Improved pen tracking during text selection
+
+- Filedialog: Hires icons added (Thanks to Tankut Eric and Stefan Smith)
+- Filedialog: Display date correctly for VFS files (rather than 1/1/04 for every file)
+- Filedialog: Display VFS filename in bottom field
+- Texthandler: Fixed missing block unlock in tidy_line_too_short that could cause crash
+- Texthandler: Fixed undo crash on deleting large amount of text
+- Display: Fixed scrollbar disappearing problems on resize
+- Display: Fixed cursor going one line over end of document in split view
+- Display: Fixed screen redrawing after deleting large selection
+- Display: Fixed scrolling on text selection flickering
+- Filehandle: Fixed file corruption on opening large encrypted doc files
+
+---------------------------------------------
+Release 0.6.2 1st May 2004
+---------------------------------------------
+
+- File dialog: fixed arrangement and appearance of buttons
+- File dialog: Sort file list alphabetically and with folders at top
+- File Dialog: correct width and height for controls
+- File dialog: Decrypt button now works
+- File Dialog: Improved file detail display
+- File dialog: New directory error checking
+- File dialog: open correct directory for trees > 1 dir deep
+- File dialog: Set filename field on file select
+- Editor: Reset cursor to start of document if file fails to open
+- Editor: Added bold fonts for prefs
+- File handler: tidy up correctly after errors in file access
+- Editor: Redraw screen correctly after canceling password dialog
+
+---------------------------------------------
+Release 0.6.1 24th April 2004
+---------------------------------------------
+
+- Doc file: Write header correctly 
+- VFS file: Remove double writing with encrypted files
+- VFS File: ensure file access mode correctly set
+- VFS File: report file size correctly in dialog
+- Encryption: Display file name on password dialog
+
+---------------------------------------------
+Release 0.6.0 20th April 2004
+---------------------------------------------
+
+- Doc file support - uncompressed only
+- Plugin-based file type support - allowing easier implementation of future file types
+- AES encryption plugin
+- Tre 600 handspring support (Tim Brown)
+- Italian and Dutch translations (Alessandro Bagnoli and Maurice Heck)
+- Code tidy ups - logical code sections etc.
+- improve cursor appearance on starting sied
+- Scrolling at end of document bugfixes
+- Set correct font before redrawing text fix
+- Reduce memory utilisation in file dialogs
+- File dialogs remember last directory opened
+- VFS file open persistence over application restart
+
+---------------------------------------------
+Release 0.5.5 3rd March 2004
+---------------------------------------------
+
+- regressions fixed: replace/replace all behaviour
+- fixed delete_selection crash
+- fixed crash when trying to rename file with no selection
+- fixed file cursor problem on file rename
+- cursor positioning on word wrap bug fix
+- match whole word find fixed
+- Norwegian and Portuguese translations added
+- Form layout fixed for all translations
+
+---------------------------------------------
+Release 0.5.4 14th February 2004
+---------------------------------------------
+- fixed cursor positioning on paste
+- fixed undo deleting text bug
+- clear selection on home/end
+
+---------------------------------------------
+Release 0.5.3 8th February 2004
+---------------------------------------------
+
+- finally fix selection threshold problems
+- Fix bug in preferences dialog code that always reopened file even when font not changed
+- Fixed wrapping bugs reported by BAM
+- Code tidy ups - broke down long functions
+- fix unable to save clean but unsaved file bug
+- improve memory allocation strategy to reduce fragmentation
+- fix large memory leak in texthandler
+- make line splitting work properly in memhandler
+
+---------------------------------------------
+Release 0.5.2 5th February 2004
+---------------------------------------------
+
+- Fixed replace next not working properly
+- Added threshold to selection on stylus tap to make it easier to move
+  cursor with stylus.
+- Tidied up Catalan translation - Paco Riviere
+
+---------------------------------------------
+Release 0.5.1 30th January 2004
+---------------------------------------------
+
+- Fixed text dissapearing while selecting bug
+
+----------------------------------------------
+Release 0.5.0 26th January 2004
+----------------------------------------------
+
+25th January 2004
+
+- Fixed overwrite file crash
+- Fixed crash on PalmOS 5 due to selection code
+- Fixed incorrect use of non-unicode PalmOS functions
+
+20th January 2004
+
+- Improved performance when editing large files
+
+15th January 2004
+
+- Fixed display clearing problem on using find again
+
+14th January 2004
+
+-removed screen flashing on clearing selection
+
+31st December 2003
+
+- Improved preferences handling
+- Incorporated beaming patch from Salomon Ramirez
+- fixed unicode handling file bug
+
+-----------------------------------------------
+Release 0.4.0 22nd December 2003
+----------------------------------------------
+
+21st December 2003
+
+-Incorporated new folder icons
+
+19th December 2003
+
+- Fixed crashes due to invalid filenames avoiding detection
+- Improved file opening display to show progress and display file more quickly
+- fixed cursor positioning problems during word wrap
+- improved word wrap behaviour
+
+2nd December 2003
+
+- Implemented custom memory handler - improves performance five fold
+
+19th November 2003
+
+- Fixed Rename button not clearing properly
+- Optimisations in reading/writing files (VFS and main memory)
+
+------------------------------------------------
+Release 0.3.0 16th November 2003
+------------------------------------------------
+
+15th November 2003
+
+- Fixed please waiting sign leaving part of screen un-redrawn
+- Fixed word count to include line feeds as white space (bloody PalmOS)
+- Fixed cursor movement at end of document with linefeeds
+
+14th November 2003
+
+- Fixed memory leak in file opening code
+- added word wrapping
+- tidied up file management dialogs
+
+8th November 2003
+
+- added support for Windows style text files
+- fixed filename not displaying correctly bug
+- fixed double redraw bug on opening file
+- fixed crash on deleting file while it's open
+
+3rd November 2003
+
+- Added new directory function
+
+2nd November 2003
+
+- Added File delete function
+- Added New directory function
+- removed CorrectCharWidth cache
+
+31st October 2003
+
+- Added File management dialog for deleting/renaming files
+- Added Rename file function and dialog
+- Fixed save location bug for root directory of SD-cards
+
+30th October 2003
+
+- Improved open/save file dialog with current dir display
+- removed total label from dialog
+- translation UI layout fixes
+
+----------------------------------------------------
+Release 0.2.2 : 29th October 2003
+----------------------------------------------------
+29th October 2003
+
+- tidied up translation strings
+
+28th October 2003
+
+- Better error handling in file reading/writing
+- Improved handling of out of memory errors
+
+27th October 2003
+
+- Improved performance of file opening code
+- Fixed crash on allocating 0 character long line on opening file
+- Fixed crash on saving zero length file using dialog
+
+----------------------------------------------------
+Release 0.2.1 : 24th October 2003
+----------------------------------------------------
+
+- Fixed null pointer reference in open dialog
+- Fixed file locking for PDB files when opening with no SiEd index file
+
+----------------------------------------------------
+Release 0.2.0 : 23rd October 2003
+----------------------------------------------------
+22nd October 2003
+
+-VFS Support finalised
+
+19th October 2003
+- Basic VFS Support
+
+30th September 2003
+
+- Started redesign of filehandling code in preparation for VFS integration
+
+----------------------------------------------------
+Release 0.1.0 : 13th September 2003
+----------------------------------------------------
+13th September 2003
+
+- further virtual memory improvements
+- clear screen fix to remove corruption during scrolling
+- Updated Spanish translation with AE's corrections
+- fixed status display redraw on new document
+- added documents statistics dialog and word count
+- added convertor for 0.0.8 index files
+- split utility functions into separate code resource due to 16 bit limitations
+
+12th September 2003
+
+- Fixed memory handling code to prevent crashes with large files
+- Multiple changes of Int16 -> Int8 to reduce memory usage
+- Fixed caching code - ensure stale data is flushed
+- Fixed virtual memory handling
+- Fixed AND and OR being wrong way round in open file unicode handling
+- Fixed incorrect rendering of large files
+
+10th September 2003
+
+- Merged Abraham Estrada's Spanish translation
+- Fixed caching code - performance increase
+
+----------------------------------------------------
+Release 0.0.8a : 7th September 2003
+----------------------------------------------------
+7th September 2003
+
+- Fixed signed/unsigned confusion in filehandler that caused crash with >32K files
+
+----------------------------------------------------
+Release 0.0.8 : 4th September 2003
+----------------------------------------------------
+4th September 2003
+
+- Implemented conversion utility 0.0.7 format -> 0.0.8
+
+1st September
+
+- Added check for maximum file size
+
+22nd August
+
+- Changed file handling to use databases instead of file streaming
+- Open file dialog tidy up
+- German translation added by Sebastian Meyer
+
+----------------------------------------------------
+Release 0.0.7 : 21st August 2003
+----------------------------------------------------
+
+21st August 2003
+
+- Added Undo/Redo single-stage history
+- Several minor stability fixes
+
+-----------------------------------------------------
+Release 0.0.6 : 15th August 2003
+-----------------------------------------------------
+
+15th August 2003
+
+- Fixed cursor line displaying incorrect line on first line of document bug
+- Fixed cursor movement bugs introduced by 'optimisations'
+- Removed pause when newline pushed over edge of line by inserted text
+- Fixed Unicode handling problems caused by confusion in some functions between bytes and characters:
+  More descriptive variable names are your friend!
+
+-----------------------------------------------------
+Release 0.0.5 : 14th August 2003
+-----------------------------------------------------
+
+14th August 2003
+
+- Fixed file opening overwrite due to saving with incorrect filename
+
+13th August 2003
+
+- Fixed screen redraw bug on cancelling file save
+- Several small file saving bug fixes
+
+12th August 2003
+
+- Several minor performance improvements in argument passing
+- Added comments for most important functions
+
+-----------------------------------------------------
+Release 0.0.4 : 5th August 2003
+-----------------------------------------------------
+
+5th August 2003
+
+- multiple additional search/replace fixes
+- improved "waiting..." display
+
+3rd August 2003
+
+- Improved encapsulation in classes
+- fixed status display drawing problems
+
+1st August 2003
+
+- fixed recursive replace-all problem
+
+31st July 2003
+
+- More build process improvements
+- Fixed text sloshing finally
+- fixed scrolling problems
+- fixed copy/paste and selection problems
+- tidied up insert character code
+- implemented delete line
+
+28th July 2003
+
+- split screen view bugfixes and appearance tidying
+- filelist showing index files fixed
+- cache for char_bound checking fixed
+- Moved Graffiti state indicator in line with Palm guidelines
+- fixed line delete bug with newline on previous line
+
+23rd July 2003
+
+- finally fixed remaining text deleting bugs
+
+22nd July 2003
+
+- Numerous lock data and block_buffer bug fixes
+- completed font switching code
+
+20th July 2003
+
+- added -Wall to CFLAGS and fixed multiple minor issues (unused variables etc)
+
+18th July 2003
+
+- screen clearing/redraw clearups
+- cursor movement fixes
+
+16th July 2003
+
+- Redesign mostly completed
+
+26th June 2003
+
+- Started major redesign after realising current design not going anywhere
+
+-------------------------------------------------------------------------------------
+Redesign started
+-------------------------------------------------------------------------------------
+
+25th June 2003
+
+- added preferences dialog
+- added selectable font size
+- fixed incorrect behaviour when low on memory
+- added sectioning for large documents to fix scrollbar Int16 overflow problem
+- fixed massive performance problem with large files by moving bracket to
+  correct position
+
+24th June 2003
+
+- multi-byte character set support complete
+- improved loading file performance
+- tidied, fixed trivial bugs in file handling code
+- switched to using built in PalmOS preferences database - state now completely saved on exit
+
+22nd June 2003
+
+- Refactored some display code to remove redundancy
+
+21st June 2003
+
+- Improved icon and added small icon for list view
+- Tidied up a few layout issues
+-------------------------------------------------------------------------------------
+Release 0.0.3 : 20th June 2003
+-------------------------------------------------------------------------------------
+20th June 2003
+
+- fixed file list bug
+- changed default build optimisation to -O2 due to over-zealous inling causing
+  function size problems
+- Fixed even more minor memory bugs shown up through extensive POSE testing
+
+19th June 2003
+
+- Fixed multiple minor memory bugs shown up through extensive POSE testing
+- Fixed incorrect screen redrawing after exiting save dialog and deleting entire document
+- Added simple 'virtual memory' handler to allow editing of documents bigger
+  than available memory. Maximum document size is now around 400k.
+
+17th June 2003
+
+- Fixed cursor clearing problems on PalmOS 5 high-density displays
+- added pen event queue flush on leaving menus/dialogs to remove unwanted multiple taps
+- added clear_selection call on paste clipboard - fixes display corruption on
+  pasting with text selected
+- fixed page up/page down problems
+-------------------------------------------------------------------------------------
+Release 0.0.2 : 16th June 2003
+-------------------------------------------------------------------------------------
+16th June 2003
+
+- Fixed Find/Replace problems - improved speed, redrawing problems
+- fixed screen dirt on unsplitting view
+- fixed multiple taps intermittently making cursor invisible
+- improved scrolling speed using offscreen buffer
+- fixed incorrect redrawing on scrolling up while selecting text
+- fixed bug that allowed user to scroll downwards forever past the end of the document
+- fixed redrawing of dirty flag asterisk
+
+15th June 2003
+
+- Actually fixed cursor erasing problems by using offscreen backing-store
+- fixed "Unallocated memory access" bug shown up by Gremlin testing
+- fixed selection text redrawing bug
+- removed some unneccesary redraws
+- corrected version reported in About dialog
+- fixed incorrect screen display after exiting replace dialog caused by savebehind
+- fixed scrollbar redisplay bug
+- fixed filename_dirty requests for redraw of status display
+- Fixed screen text corruption at right hand-edge when deleting
+- tidied code
+- removed some unused variables
+- changed standard build to use -O3 for speed
+-------------------------------------------------------------------------------------
+Release 0.0.1 : 14th June 2003
+-------------------------------------------------------------------------------------

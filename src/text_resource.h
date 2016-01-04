@@ -1,5 +1,11 @@
 /*
- * SiEd - A text editor for PalmOS 3.5+ English language version (C) 2003-2004 Benjamin Roe
+ * SiEd-Dana - A text editor optimized for the AlphaSmart Dana.
+ * Copyright (C) 2016 Reg Tiangha
+ * Contact:  reg@reginaldtiangha.com
+ *
+ * Portions of SiEd-Dana are based off the original SiEd project,
+ * Copyright (C) 2003-2005 Benjamin Roe with original translations by:
+ *
  * French Translation (C) 2003 Johnny Brasseur/David Bosman
  * Spanish Translation (C) 2004 Abraham Estrada
  * German Tranlation (C) 2003 Sebastian Meyer
@@ -11,7 +17,6 @@
  * Dutch Translation (C)2004 Maurice Heck
  * Portuguese Translation (C) 2004 Matheus Lamberti
  * Czech Translation (C) 2004 Benda Radek
- * Contact Email:ben@benroe.com
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
