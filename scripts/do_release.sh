@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# Build script to compile all language versions of SiEd-Dana.
+#
 # USAGE:  do_release <version number>
+#
 
 function make_release()
 {
@@ -10,7 +13,7 @@ function make_release()
 	make clean
 	make "$2"
 	zip sied-dana-"$1"-"$3".prc.zip sied-dana.prc
-	mv sied--dana-"$1"-"$3".prc.zip ../../sied-dana_install/
+	mv sied-dana-"$1"-"$3".prc.zip ../../sied-dana_install/
 }
 
 
