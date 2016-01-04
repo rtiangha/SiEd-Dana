@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Build script to compile all language versions of SiEd-Dana.
+# Build script to compile all language versions of SiEd-Dana from the Master
+# branch on GitHub.
 #
 # USAGE:  do_release <version number>
 #
