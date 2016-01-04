@@ -33,13 +33,13 @@
  * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-//this file contains all the text for SiEd dialogs, menus etc.
+//this file contains all the text for SiEd-Dana dialogs, menus etc.
 //the language for the build is selected at build time by defining the
 //correct LANGUAGE_ symbol
 //if you want add another language, just replace the english words and change the language symbol
 //definition. Leave all the punctuation and numbers unchanged!
 
-#define SIED_VERSION "SiEd 0.10.0_beta3"
+#define SIED_VERSION "SiEd-Dana 0.10.0_beta4"
 #define READ_ONLY_MODE "Read Only"
 #define MAIN_DIRNODE_TEXT "Main"
 
@@ -63,7 +63,7 @@
 #define CLOSE_TEXT_SAVED "Close current file?"
 #define INCREMENTAL_FILE_OPEN_MODE "Initial File Load"
 #define FILE_TOO_LARGE "File Too Large"
-#define FILE_TOO_LARGE_TEXT "File exceeds maximum size for SiEd."
+#define FILE_TOO_LARGE_TEXT "File exceeds maximum size for SiEd-Dana."
 #define FILE_TRUNCATION_TEXT "Truncated version of file loaded due to insufficient memory."
 #define FILE_TRUNCATION "Memory Error"
 #define FROM_TOP "From Top"
@@ -108,11 +108,11 @@
 #define SELECTION_MODE "Selection Mode"
 #define TEXT_BEAM "Beam"
 #define BEAM_FILE "Selected file"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Palm Style"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Select All"
-#define WAITING_TEXT "Please Wait..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Please Wait..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "New Directory Name"
@@ -173,7 +173,7 @@
 #define CONFIRM_OVERWRITE "Confirm Overwrite"
 #define MESSAGE_CONFIRM_OVERWRITE "Opening a new file will erase current changes. Save file first?"
 
-#define COPYRIGHT_MESSAGE "\251 Benjamin Roe 2003-2004\nArtwork \251 Stefan Smith and Tankut Eric\nwww.benroe.com/sied\nThis application is distributed under the terms of the GPL. "
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Based on SiEd \251 2003-2005 Benjamin Roe\nArtwork \251 Stefan Smith and Tankut Eric\nThis application is distributed under the terms of the GPLv2. "
 #define NEW_FILE "New File"
 #define MESSAGE_NEW_FILE "Open a new file?"
 #define EDITOR_PREFERENCES "Editor Preferences"
@@ -242,7 +242,7 @@
 #define STOP_RECORD_MENU "Arrêter Enreg."
 //Untranslated strings for the French version
 #define FILE_TOO_LARGE "Fichier trop large"
-#define FILE_TOO_LARGE_TEXT "Fichier dépasse taille maximale" // File exceeds maximum size for SiEd."
+#define FILE_TOO_LARGE_TEXT "Fichier dépasse taille maximale" // File exceeds maximum size for SiEd-Dana."
 #define FILE_TRUNCATION_TEXT "par manque de mémoire une version tronquée du fichier est chargée"//"Truncated version of file loaded due to insufficient memory."
 #define FILE_TRUNCATION "erreur mémoire"//"Memory Error"
 #define FROM_TOP "Du Début"//"From Top"
@@ -286,11 +286,11 @@
 #define SELECTION_MODE "Selection Mode"
 #define TEXT_BEAM "Transmettre"
 #define BEAM_FILE "Fichier sélectionné"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Palm Style"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Sélect. tout"
-#define WAITING_TEXT "Patientez SVP..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Patientez SVP..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 
@@ -445,11 +445,11 @@
 #define SELECTION_MODE "Auswahlmodus"
 #define TEXT_BEAM "Beamen"
 #define BEAM_FILE "Gewählte Datei"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Palm Style"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Alles markieren"
-#define WAITING_TEXT "Bitte warten..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Bitte warten..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 
@@ -567,7 +567,7 @@
 
 #ifdef LANGUAGE_SPANISH
 #define FILE_TOO_LARGE "Archivo muy grande"
-#define FILE_TOO_LARGE_TEXT "El archivo excede el maximo por SiEd."
+#define FILE_TOO_LARGE_TEXT "El archivo excede el maximo por SiEd-Dana."
 #define FILE_TRUNCATION_TEXT "Version incompleta del archivo dada la capacidad de memoria disponible."
 #define FILE_TRUNCATION "Error de memoria"
 #define FROM_TOP "Desde arriba"
@@ -610,14 +610,14 @@
 #define SELECTION_MODE "Selecciona modo"
 #define TEXT_BEAM "Beam"
 #define BEAM_FILE "Selecciona archivo"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Estilo Palm"
 #define STANDARD_STYLE_TEXT "Estandard"
 #define SELECT_ALL "Seleccionar Todo"
 
 //C++ file text
 
-#define WAITING_TEXT "Por favor Espera..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Por favor Espera..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 
@@ -752,7 +752,7 @@
 #define MACRO_POPUP_FOUR_STRINGS
 //remaining english strings I could find
 #define FILE_TOO_LARGE "L'arxiu és massa gran"
-#define FILE_TOO_LARGE_TEXT "L'arxiu supera la mida màxima que SiEd pot tractar."
+#define FILE_TOO_LARGE_TEXT "L'arxiu supera la mida màxima que SiEd-Dana pot tractar."
 #define FILE_TRUNCATION_TEXT "S'ha carregat una versió truncada de l'arxiu donat que ho hi ha prou memòria."
 #define FILE_TRUNCATION "Error de memòria"
 #define FROM_TOP "Des d'adalt"
@@ -799,7 +799,7 @@
 #define SELECTION_MODE "Tipus de selecció"
 #define TEXT_BEAM "Envia"
 #define BEAM_FILE "L'arxiu seleccionat"
-#define BEAM_APP "l'aplicació SiEd"
+#define BEAM_APP "l'aplicació SiEd-Dana"
 #define PALM_STYLE_TEXT "A l'estil Palm"
 #define STANDARD_STYLE_TEXT "Estàndar"
 #define SELECT_ALL "Selecciona-ho tot"
@@ -949,7 +949,7 @@
 #define SELECTION_MODE "Modo de Seleção"
 #define TEXT_BEAM "Enviar"
 #define BEAM_FILE "Arquivo Selecionado"
-#define BEAM_APP "Enviar SiEd"
+#define BEAM_APP "Enviar SiEd-Dana"
 #define PALM_STYLE_TEXT "Estilo Palm"
 #define STANDARD_STYLE_TEXT "Padrão"
 #define SELECT_ALL "Selecionar Tudo"
@@ -1071,7 +1071,7 @@
 //Remaining untranslated strings
 #define INC_SEARCH_TEXT "Inkr. Søk" //abbreviation for incremental search
 #define FILE_TOO_LARGE "For stor fil"
-#define FILE_TOO_LARGE_TEXT "Fil for stor for SiEd."
+#define FILE_TOO_LARGE_TEXT "Fil for stor for SiEd-Dana."
 #define FILE_TRUNCATION_TEXT "Filen avkuttet pga for lite minne."
 #define FILE_TRUNCATION "Minne feil"
 #define STOP_RECORD_MENU "Stans innspilling"
@@ -1083,7 +1083,7 @@
 #define SELECTION_MODE "Utvalgsmodus"
 #define TEXT_BEAM "Send"
 #define BEAM_FILE "Valgt fil"
-#define BEAM_APP "SiEd Prog."
+#define BEAM_APP "SiEd-Dana Prog."
 #define PALM_STYLE_TEXT "Palm stil"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Velg alt"
@@ -1119,7 +1119,7 @@
 #define PLAY "Avspill"
 
 
-#define WAITING_TEXT "Vennligst vent..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Vennligst vent..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Nytt mappenavn"
@@ -1266,13 +1266,13 @@
 #define SELECTION_MODE "Modalità selezione"
 #define TEXT_BEAM "Invia IR"
 #define BEAM_FILE "File selezionato"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Stile Palm"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Seleziona tutto"
 
 
-#define WAITING_TEXT "Prego attendi..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Prego attendi..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Nuovo nome della directory"
@@ -1418,12 +1418,12 @@
 #define SELECTION_MODE "Selection Mode"
 #define TEXT_BEAM "Zend met IR"
 #define BEAM_FILE "Geselecteerd bestand"
-#define BEAM_APP  "SiEd App."
+#define BEAM_APP  "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Palm Style"
 #define STANDARD_STYLE_TEXT "Standaard"
 #define SELECT_ALL "Selecteer Alles"
 
-#define WAITING_TEXT "Moment a.u.b." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Moment a.u.b." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Naam nieuwe map"
@@ -1572,11 +1572,11 @@
 #define SELECTION_MODE "Secme kipi"
 #define TEXT_BEAM "Kizilotesi"
 #define BEAM_FILE "Secili dosya"
-#define BEAM_APP "SiEd Prog."
+#define BEAM_APP "SiEd-Dana Prog."
 #define PALM_STYLE_TEXT "Palm Tarzi"
 #define STANDARD_STYLE_TEXT "Standart"
 #define SELECT_ALL "Tumunu Sec"
-#define WAITING_TEXT "Bekleyiniz..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Bekleyiniz..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Yeni klasor adi"
@@ -1718,11 +1718,11 @@
 #define SELECTION_MODE "Âûáîð ðåæèìà"
 #define TEXT_BEAM "Ïåðåäàòü ïî ÈÊ"
 #define BEAM_FILE "Âûáðàííûé ôàéë"
-#define BEAM_APP "SiEd"
+#define BEAM_APP "SiEd-Dana"
 #define PALM_STYLE_TEXT "Ñòèëü Palm"
 #define STANDARD_STYLE_TEXT "Ñòàíäàðòíûé"
 #define SELECT_ALL "Âûáðàòü âñå"
-#define WAITING_TEXT "Æäèòå..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Æäèòå..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Èìÿ íîâîé äèðåêòîðèè"
@@ -1877,11 +1877,11 @@
 #define SELECTION_MODE "Tryb zaznaczania"
 #define TEXT_BEAM "Podczerwien"
 #define BEAM_FILE "Wybierz plik"
-#define BEAM_APP "SiEd App."
+#define BEAM_APP "SiEd-Dana App."
 #define PALM_STYLE_TEXT "Palm Style"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Zaznacz wszystko"
-#define WAITING_TEXT "Poczekaj..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Poczekaj..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Nowa nazwa katalogu"
@@ -2027,11 +2027,11 @@
 #define SELECTION_MODE "Markerings läge"
 #define TEXT_BEAM "Beama"
 #define BEAM_FILE "Aktuell fil"
-#define BEAM_APP "Programmet SiEd"
+#define BEAM_APP "Programmet SiEd-Dana"
 #define PALM_STYLE_TEXT "Palm"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Markera allt"
-#define WAITING_TEXT "Vänligen vänta..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Vänligen vänta..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Ny katalog"
@@ -2177,11 +2177,11 @@
 #define SELECTION_MODE "Oznaèení textu"
 #define TEXT_BEAM "Beam"
 #define BEAM_FILE "Oznaèený soubor"
-#define BEAM_APP "SiEd Apl."
+#define BEAM_APP "SiEd-Dana Apl."
 #define PALM_STYLE_TEXT "Palm Styl"
 #define STANDARD_STYLE_TEXT "Standard"
 #define SELECT_ALL "Oznaèit ve"
-#define WAITING_TEXT "Èekejte Prosím..." //Text displayed while leaving SiEd
+#define WAITING_TEXT "Èekejte Prosím..." //Text displayed while leaving SiEd-Dana
 
 //Resource text
 #define TEXT_NEW_DIRECTORY "Nový Název Sloky"
@@ -2211,7 +2211,7 @@
 #define TEXT_FILE "Soubor"
 #define TEXT_NEW "Nový"
 #define PREFERENCES_ABBR "Pref." //abbreviation for preferences
-#define TEXT_ABOUT "O SiEd"
+#define TEXT_ABOUT "O SiEd-Dana"
 #define TEXT_COPY "Kopírovat"
 #define TEXT_PASTE "Vloit"
 #define TEXT_CUT "Vyjmout"
