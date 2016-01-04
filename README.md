@@ -48,7 +48,7 @@ When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm
 
 Also note that Palm changed some of the macro definitions in the later versions of their SDKs, which may require a modification to the `WideTallApp.h` file from the AlphaSmart SDK in order to get things to compile properly. If so, change all invocations of the _`Str()` macro in the `WideTallApp.h` file to invoke `_PalmTypes_OS_CALL_Str()` instead.
 
-The targets (i.e. type make target) available for the make process are:
+The targets (i.e. type `make <target>`) available for the make process are:
 
 * `all`: builds the English language full version
 
