@@ -38,7 +38,7 @@ There is a usage guide with screenshots and other useful information available f
 ## Development Environment
 Compiles using PRC-Tools and PiLRC.
 
-The original SiEd release from 2005 as published by Benjamin Roe was slightly modified in order to compile using more modern Palm SDKs released after 2005 (mainly, the addition of a few more library header includes in the editor.cc file) as well as to update the rendering engine to work with the AlphaSmart Dana's 560x160 pixel display. Has tested as successfully compiling using either Palm OS 5 SDK R3 or R4 combined with Palm Desktop SDK 5.4. It might work with other combinations of the Palm/Garnet SDKs as well, but for future development, it'd be wise to standardize on these versions of the SDKs. With the inclusion of the new library includes in `editor.cc`, SiEd may no longer compile successfully using older Palm SDK versions without reverting the changes first.
+The original SiEd release from 2005 as published by Benjamin Roe was slightly modified in order to compile using more modern Palm SDKs released after 2005 (mainly, the addition of a few more library header includes in the editor.cc file) as well as to update the rendering engine to work with the AlphaSmart Dana's 560x160 pixel display. Has tested as successfully compiling using either Palm OS 5 SDK R3 or R4 combined with Palm Desktop SDK 5.4. It might work with other combinations of the Palm/Garnet SDKs as well, but for future development, it'd be wise to standardize on these versions of the SDKs. With the inclusion of the new library includes in `editor.cc`, SiEd-Dana may no longer compile successfully using older Palm SDK versions without reverting the changes first.
 
 ## How to Build?
 
@@ -48,7 +48,7 @@ http://prc-tools.sourceforge.net
 
 as well as Palm OS 5 SDK R3 or R4 along with Palm Desktop SDK 5.4 and a copy of the AlphaSmart Dana SDK.
 
-When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the 68K and Common directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
+When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the `68K` and `Common` directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
 
 Also note that Palm changed some of the macro definitions in the later versions of their SDKs, which may require a modification to the `WideTallApp.h` file from the AlphaSmart SDK. If so, change all invocations of the _`Str()` macro in the `WideTallApp.h` file to invoke `_PalmTypes_OS_CALL_Str()` instead.
 
