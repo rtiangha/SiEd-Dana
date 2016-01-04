@@ -1,11 +1,11 @@
 # SiEd-Dana - A Text Editor Optimized for the AlphaSmart Dana
-A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10-beta3 release of SiEd from April 27, 2005 by Benjamin Roe.
+A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10-beta3 release of [SiEd](https://github.com/rtiangha/SiEd) from April 27, 2005 by Benjamin Roe.
 
 ## What Is It?
 SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under the GPL.
 
 ## Instructions
-To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop sofware to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PRC-Tools package and a copy of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK.
+To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop sofware to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PiLRC and PRC-Tools packages as well as copies of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK.
 
 Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equivalent (listed in the menus). Documents auto-save on exiting the application.
 
@@ -13,7 +13,7 @@ Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equival
 
 * Support for plain-text files on VFS volumes
 * DOC format support (uncompressed only at present)
-* Edit ~600Kb files on most PalmOS 5 devices, ~100Kb files on earlier devices
+* Edit ~100Kb text files on the AlphaSmart Dana
 * Search and replace
 * Word count
 * Large undo history
@@ -36,21 +36,17 @@ There is a usage guide with screenshots and other useful information available f
 * There is a bug where the program may crash when using the Inc. Search functionality.
 
 ## Development Environment
-Compiles using PRC-Tools and PiLRC.
+Compiles using [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/).
 
-The original SiEd release from 2005 as published by Benjamin Roe was slightly modified in order to compile using more modern Palm SDKs released after 2005 (mainly, the addition of a few more library header includes in the editor.cc file) as well as to update the rendering engine to work with the AlphaSmart Dana's 560x160 pixel display. Has tested as successfully compiling using either Palm OS 5 SDK R3 or R4 combined with Palm Desktop SDK 5.4. It might work with other combinations of the Palm/Garnet SDKs as well, but for future development, it'd be wise to standardize on these versions of the SDKs. With the inclusion of the new library includes in `editor.cc`, SiEd-Dana may no longer compile successfully using older Palm SDK versions without reverting the changes first.
+The original SiEd release from 2005 as published by Benjamin Roe was slightly modified in order to compile using more modern Palm SDKs released after 2005 (mainly, the addition of a few more library header includes in the 'editor.cc' file) as well as to update the rendering engine to work with the AlphaSmart Dana's 560x160 pixel display. Has tested as successfully compiling using either Palm OS 5 SDK R3 or R4 combined with Palm Desktop SDK 5.4. It might work with other combinations of the Palm/Garnet SDKs as well, but for future development, it'd be wise to standardize on these versions of the SDKs. With the inclusion of the new library includes in `editor.cc`, SiEd-Dana may no longer compile successfully using older Palm SDK versions without reverting the changes first.
 
 ## How to Build?
 
-Building a PalmOS executable from this source code requires a complete install of the PRC-Tools package, available from:
+Building a PalmOS executable from this source code requires a complete install of the [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/) packages, as well as [Palm OS 5 SDK R3 *or* R4]((https://web.archive.org/web/20150101205837/http://cdn.xenu.tk/pub/palm-archive/pub/programming/sdk/5.0/) along with [Palm Desktop SDK 5.4](https://web.archive.org/web/20150615082823/http://pdaexpert.net/downloads/palm-os/sdk-v54-para-produtos-palm-com-palm-os/) and a copy of the AlphaSmart Dana SDK.
 
-http://prc-tools.sourceforge.net
+When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK library files, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the `68K` and `Common` directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
 
-as well as Palm OS 5 SDK R3 or R4 along with Palm Desktop SDK 5.4 and a copy of the AlphaSmart Dana SDK.
-
-When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the `68K` and `Common` directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
-
-Also note that Palm changed some of the macro definitions in the later versions of their SDKs, which may require a modification to the `WideTallApp.h` file from the AlphaSmart SDK. If so, change all invocations of the _`Str()` macro in the `WideTallApp.h` file to invoke `_PalmTypes_OS_CALL_Str()` instead.
+Also note that Palm changed some of the macro definitions in the later versions of their SDKs, which may require a modification to the `WideTallApp.h` file from the AlphaSmart SDK in order to get things to compile properly. If so, change all invocations of the _`Str()` macro in the `WideTallApp.h` file to invoke `_PalmTypes_OS_CALL_Str()` instead.
 
 The targets (i.e. type make target) available for the make process are:
 
