@@ -26,7 +26,7 @@ make
 cp sied-dana.prc ../../sied-dana_install/sied-dana-current.prc
 zip sied-dana-$1.prc.zip sied-dana.prc
 mv sied-dana-$1.prc.zip ../../sied-dana_install/
-cp changelog ../../sied-dana_install/changelog.txt
+cp ../docs/changelog ../../sied-dana_install/changelog.txt
 
 make_release $1 french fr
 make_release $1 german de
