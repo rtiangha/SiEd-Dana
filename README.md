@@ -1,5 +1,5 @@
 # SiEd-Dana - A Text Editor Optimized for the AlphaSmart Dana
-A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10-beta3 release of SiEd from April 27, 2005.
+A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10-beta3 release of SiEd from April 27, 2005 by Benjamin Roe.
 
 ## What Is It?
 SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under the GPL.
@@ -7,7 +7,7 @@ SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaS
 ## Instructions
 To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop sofware to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PRC-Tools package and a copy of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK.
 
-Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equivalent (listed in the menus). Documents auto-save on exiting the application. There is a simple User Guide if you need it.
+Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equivalent (listed in the menus). Documents auto-save on exiting the application.
 
 ## Features
 
@@ -26,6 +26,7 @@ Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equival
 
 ## Requirements
 * AlphaSmart Dana, either 8MB or 16MB versions
+
 SiEd-Dana *may* run on other devices running PalmOS v.3.5 or greater, however the SiEd-Dana interfaces are optimized for the 560x160 resolution of the AlphaSmart Dana and as such, may not render/operate correctly on other Palm devces.
 
 ## Usage
@@ -59,5 +60,5 @@ The targets (i.e. type make target) available for the make process are:
 
 Copyright Notice: This software is licensed under the terms of the GPL, included in the LICENSE file in the source code directory.
 
-The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the translations is attributed in the text_resource.h file. Portions of SiEd-Dana are based off of the original SiEd project Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
+The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the translations is attributed in the `text_resource.h` file. Portions of SiEd-Dana are based off of the original SiEd project Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
 
