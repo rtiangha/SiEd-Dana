@@ -5,7 +5,7 @@ A fork of the original SiEd Palm OS text editor project, optimized for the Alpha
 SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under the GPL.
 
 ## Instructions
-To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop sofware to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PiLRC and PRC-Tools packages as well as copies of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK.
+To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop sofware to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PiLRC and PRC-Tools packages as well as copies of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK. Some build instructions are included below.
 
 Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equivalent (listed in the menus). Documents auto-save on exiting the application.
 
@@ -33,7 +33,7 @@ SiEd-Dana *may* run on other devices running PalmOS v.3.5 or greater, however th
 There is a usage guide with screenshots and other useful information available from the original SiEd project site, which you can now access via [Archive.org's Wayback Machine](https://web.archive.org/web/20070130170506/http://benroe.com/sied/user.php). Even though the screen size in the User Guide is based on screens with a resolution of 160x160 pixels, functionality-wise, the interfaces are the same.
 
 ## Known Issues
-* There is a bug where the program may crash when using the Inc. Search functionality.
+* There is a bug where the program may crash when using the **Inc. Search** functionality.
 
 ## Development Environment
 Compiles using [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/).
@@ -42,7 +42,7 @@ The original SiEd release from 2005 as published by Benjamin Roe was slightly mo
 
 ## How to Build?
 
-Building a PalmOS executable from this source code requires a complete install of the [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/) packages, as well as [Palm OS 5 SDK R3 *or* R4]((https://web.archive.org/web/20150101205837/http://cdn.xenu.tk/pub/palm-archive/pub/programming/sdk/5.0/) along with [Palm Desktop SDK 5.4](https://web.archive.org/web/20150615082823/http://pdaexpert.net/downloads/palm-os/sdk-v54-para-produtos-palm-com-palm-os/) and a copy of the AlphaSmart Dana SDK.
+Building a PalmOS executable from this source code requires a complete install of the [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/) packages, as well as [Palm OS 5 SDK R3 *or* R4](https://web.archive.org/web/20150101205837/http://cdn.xenu.tk/pub/palm-archive/pub/programming/sdk/5.0/) along with [Palm Desktop SDK 5.4](https://web.archive.org/web/20150615082823/http://pdaexpert.net/downloads/palm-os/sdk-v54-para-produtos-palm-com-palm-os/) and a copy of the AlphaSmart Dana SDK.
 
 When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK library files, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the `68K` and `Common` directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
 
