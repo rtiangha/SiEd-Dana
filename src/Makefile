@@ -110,6 +110,7 @@ clean:
 	rm -f *.orig
 	rm -f *~
 	rm -f sied-dana.prc
+	rm -f final_form.rcp 
 	rm -f ../build/final_form.rcp
 tidy:
 	astyle --style=ansi -T *.cc
