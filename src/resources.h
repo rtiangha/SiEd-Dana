@@ -252,7 +252,7 @@ enum SiReturnCode {ACTION_CANCELLED,ERROR,ACTION_OK};
 #define PrefsID 1
 
 // Palmos bits
-#define AppID 'SiEd'
+#define AppID 'SiDD'
 #define INITIAL_BLOCK_ARRAY_SIZE 128
 #define PREFS_DATABASE "sied-prefs"
 #define TAB_WIDTH 15
