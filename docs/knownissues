@@ -1,0 +1,6 @@
+SiEd-Dana KNOWN ISSUES (as of SiEd-Dana-beta4)
+
+* Will most likely contain any bugs that were already present in the original SiEd-0.10-beta3 release.
+* Does not handle Screen Rotate very well; will edit and render text off-screen once the cursor goes past 160 pixels in vertical mode. For now, use SiEd-Dana in normal display mode.
+* Let me know if you find anything else by filing a report on GitHub! 
+
