@@ -173,7 +173,7 @@
 #define CONFIRM_OVERWRITE "Confirm Overwrite"
 #define MESSAGE_CONFIRM_OVERWRITE "Opening a new file will erase current changes. Save file first?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
 
 #define NEW_FILE "New File"
 #define MESSAGE_NEW_FILE "Open a new file?"
@@ -353,7 +353,7 @@
 #define OVERWRITE_FILE_TEXT "Effacer le fichier existant ?"
 #define MESSAGE_CONFIRM_OVERWRITE "Ouvrir un nouveau fichier effacera les modifications en cours. Sauvegarder le fichier d'abord ?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Basé sur SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nCette application est sous licence GPL. Traduction française Johnny Brasseur (2003), David Bosman (2004) "// Is it ok ?
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Basé sur SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nCette application est sous licence GPL. Traduction française Johnny Brasseur (2003), David Bosman (2004) "// Is it ok ?
 
 #define NEW_FILE "Nouveau fichier"
 #define MESSAGE_NEW_FILE "Créer un nouveau fichier?"
@@ -511,7 +511,7 @@
 #define MESSAGE_CONFIRM_OVERWRITE "Öffnen einer neuen Datei löscht aktuelle Änderungen. Datei zuerst speichern?"
 //#define MESSAGE_CONFIRM_OVERWRITE "Wenn Sie eine neue Datei öffnen wird dies die gemachten Änderungen löschen. Änderungen speichern?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Beyogen auf SiEd, \251 2003-2005 Benjamin Roe.\nKunstwerk \251 Stefan Smith & Tankut Eric.\n\Deutsche Übersetzung von Sebastian Meyern\nDieses Programm wird unter den Auflagen der GPL verbreitet."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Beyogen auf SiEd, \251 2003-2005 Benjamin Roe.\nKunstwerk \251 Stefan Smith & Tankut Eric.\n\Deutsche Übersetzung von Sebastian Meyern\nDieses Programm wird unter den Auflagen der GPL verbreitet."
 
 #define NEW_FILE "Neue Datei"
 #define MESSAGE_NEW_FILE "Eine neue Datei öffnen?"
@@ -682,7 +682,7 @@
 #define CONFIRM_OVERWRITE "Confirmar Sobreescritura"
 #define MESSAGE_CONFIRM_OVERWRITE "Abrir un nuevo archivo borrara los cambios actuales.\n\¿Grabar archivo primero?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Residencia en SiEd, \251 2003-2005 Benjamin Roe.\nObra de arte \251 Stefan Smith & Tankut Eric.\nTraducción al español por Abraham Estrada\n\nEsta aplicación es distribuida bajo los terminos de GPL."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Residencia en SiEd, \251 2003-2005 Benjamin Roe.\nObra de arte \251 Stefan Smith & Tankut Eric.\nTraducción al español por Abraham Estrada\n\nEsta aplicación es distribuida bajo los terminos de GPL."
 
 #define NEW_FILE "Nuevo Archivo"
 #define MESSAGE_NEW_FILE "¿Crear nuevo archivo?"
@@ -869,7 +869,7 @@
 #define CONFIRM_OVERWRITE "Confirmeu Sobreescriptura"
 #define MESSAGE_CONFIRM_OVERWRITE "Obrir un nou arxiu esborrarà  els canvis actuals. Voleu desar-los primer?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Basat en SiEd, \251 2003-2005 Benjamin Roe.\nObra d'art \251 Stefan Smith & Tankut Eric.\nAquesta aplicació es distribueix i tradueix sota els termes de la GPL.\251 de la traducció: PalmCAT 2003\nwww.palmcat.org\n"
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Basat en SiEd, \251 2003-2005 Benjamin Roe.\nObra d'art \251 Stefan Smith & Tankut Eric.\nAquesta aplicació es distribueix i tradueix sota els termes de la GPL.\251 de la traducció: PalmCAT 2003\nwww.palmcat.org\n"
 
 #define NEW_FILE "Nou Arxiu"
 #define MESSAGE_NEW_FILE "Obrir un nou arxiu?"
@@ -1020,7 +1020,7 @@
 #define CONFIRM_OVERWRITE "Confirmar Sobrescrição"
 #define MESSAGE_CONFIRM_OVERWRITE "Abrir um novo arquivo irá apagar as mudanças. Deseja salvar primeiro?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Baseado em SiEd, \251 2003-2005 Benjamin Roe.\nObra de arte \251 Stefan Smith & Tankut Eric.\nEsta aplicação é distribuída sob os termos GPL."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Baseado em SiEd, \251 2003-2005 Benjamin Roe.\nObra de arte \251 Stefan Smith & Tankut Eric.\nEsta aplicação é distribuída sob os termos GPL."
 
 #define NEW_FILE "Novo Arquivo"
 #define MESSAGE_NEW_FILE "Abrir um novo arquivo?"
@@ -1186,7 +1186,7 @@
 #define CONFIRM_OVERWRITE "Bekreft overskriving"
 #define MESSAGE_CONFIRM_OVERWRITE "Endringer vil gå tapt ved åpning av ny fil. Lagre først?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Basert pa SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nDenne applikasjonen distribueres under GPL-lisensen. Oversatt til norsk av John Gothard" //Norwegian translation by jorigo@online.no
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Basert pa SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nDenne applikasjonen distribueres under GPL-lisensen. Oversatt til norsk av John Gothard" //Norwegian translation by jorigo@online.no
 
 #define NEW_FILE "Ny fil"
 #define MESSAGE_NEW_FILE "Åpne en ny fil?"
@@ -1340,7 +1340,7 @@
 #define CONFIRM_OVERWRITE "Confermi Sovrascrittura"
 #define MESSAGE_CONFIRM_OVERWRITE "L'apertura di un nuovo file annullerà le ultime modifiche. Salvo prima il file?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
 
 #define NEW_FILE "Nuovo File"
 #define MESSAGE_NEW_FILE "Apro un nuovo file?"
@@ -1492,7 +1492,7 @@
 #define CONFIRM_OVERWRITE "Bevestig overschrijven"
 #define MESSAGE_CONFIRM_OVERWRITE "Openen van een nieuw bestand wist de aangebrachte veranderingen. Bestand eerst opslaan?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Gebaseerd op SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nDit programma wordt verspreid volgens de bepalingen van de GPL."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Gebaseerd op SiEd, \251 2003-2005 Benjamin Roe.\nArtwork \251 Stefan Smith & Tankut Eric.\nDit programma wordt verspreid volgens de bepalingen van de GPL."
 
 #define NEW_FILE "Nieuw Bestand"
 #define MESSAGE_NEW_FILE "Open een nieuw bestand?"
@@ -1646,7 +1646,7 @@
 #define CONFIRM_OVERWRITE "Uzerine yazmayi onaylayiniz"
 #define MESSAGE_CONFIRM_OVERWRITE "Yeni dosya acarsaniz degisiklikleri kaybedersiniz.  Once kaydedelim mi?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Dayali SiEd, \251 2003-2005 Benjamin Roe.\nSanat eseri \251 Stefan Smith & Tankut Eric.\nBu yazilim GPL anlasmasi kurallari altinda dagitilmaktadir."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Dayali SiEd, \251 2003-2005 Benjamin Roe.\nSanat eseri \251 Stefan Smith & Tankut Eric.\nBu yazilim GPL anlasmasi kurallari altinda dagitilmaktadir."
 
 #define NEW_FILE "Yeni Dosya"
 #define MESSAGE_NEW_FILE "Yeni dosya acilsin mi?"
@@ -1796,7 +1796,7 @@
 #define CONFIRM_OVERWRITE "Ïîäòâåðäèòå!"
 #define MESSAGE_CONFIRM_OVERWRITE "Îòêðûòèå íîâîãî ôàéëà óíè÷òîæåò èçìåíåíèÿ â ñòàðîì. Ñîõðàíèòü ôàéë?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
 
 #define NEW_FILE "Íîâûé ôàéë!"
 #define MESSAGE_NEW_FILE "Îòêðûòü íîâûé ôàéë?"
@@ -1953,7 +1953,7 @@
 #define CONFIRM_OVERWRITE "Zatwierdz nadpisanie"
 #define MESSAGE_CONFIRM_OVERWRITE "Otwarcie nowego pliku spowoduje utrate zmian w pliku obecnym.  Zapiac zmiany?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
 
 #define NEW_FILE "Nowy plik"
 #define MESSAGE_NEW_FILE "Otworzyc nowy plik?"
@@ -2104,7 +2104,7 @@
 #define CONFIRM_OVERWRITE "Bekräfta överskrivning"
 #define MESSAGE_CONFIRM_OVERWRITE "Öppna ny fil raderar gjorda ändringar.Spara filen först?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\251 Baserat pa SiEd, \251 2003-2005 Benjamin Roe.\nKonstverk \251 Stefan Smith & Tankut Eric.\netta program distribueras enligt villkoren i GPL. "
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\251 Baserat pa SiEd, \251 2003-2005 Benjamin Roe.\nKonstverk \251 Stefan Smith & Tankut Eric.\netta program distribueras enligt villkoren i GPL. "
 
 #define NEW_FILE "Ny Fil"
 #define MESSAGE_NEW_FILE "Öppna en ny fil?"
@@ -2255,7 +2255,7 @@
 #define CONFIRM_OVERWRITE "Pøepsání souboru"
 #define MESSAGE_CONFIRM_OVERWRITE "Otevøením souboru zruíte provedené zmìny. Chcete uloit?"
 
-#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+#define COPYRIGHT_MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
 
 #define NEW_FILE "Nový"
 #define MESSAGE_NEW_FILE "Vytvoøit nový soubor?"
