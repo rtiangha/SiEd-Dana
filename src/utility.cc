@@ -33,9 +33,9 @@
 #include "AESLib/AESLib.h"
 #include "Form.h"
 Boolean SiUtility::VFS_SUPPORT=false;
-Coord SiUtility::SCREEN_WIDTH=160;
+Coord SiUtility::SCREEN_WIDTH=560;
 Coord SiUtility::SCREEN_HEIGHT=160;
-Coord SiUtility::ACTIVE_SCREEN_WIDTH=152;
+Coord SiUtility::ACTIVE_SCREEN_WIDTH=552;
 Coord SiUtility::ACTIVE_SCREEN_HEIGHT=160;
 Coord SiUtility::CurrentScreenHeight=160;
 UInt32 SiUtility::screen_version=0;
