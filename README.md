@@ -2,10 +2,10 @@
 A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10.0_beta3 release of [SiEd](https://github.com/rtiangha/SiEd) from April 27, 2005 by Benjamin Roe.
 
 ## Current Version
-* The current version of SiEd-Dana is 0.10-0-beta4.
+* The current version of SiEd-Dana is [0.10-0-beta4](https://github.com/rtiangha/SiEd-Dana/releases/tag/0.10.0-beta4).
 
 ## What Is It?
-SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under the GPL.
+SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under version 2 of the GPL.
 
 ## Instructions
 To install SiEd-Dana, just download the latest PRC file and use your favourite Palm desktop software to copy the file over to your AlphaSmart Dana. If you want to hack around with the source or build your own PRC you'll need the PiLRC and PRC-Tools packages as well as copies of Palm OS 5 SDK R3 or R4, Palm Desktop SDK 5.4, and a copy of the AlphaSmart Dana SDK. Some build instructions are included below.
@@ -30,7 +30,7 @@ Using SiEd-Dana is pretty self explanatory. All commands have a keyboard equival
 ## Requirements
 * AlphaSmart Dana, either 8MB or 16MB versions
 
-SiEd-Dana *may* run on other devices running PalmOS v.3.5 or greater, however the SiEd-Dana interfaces are optimized for the 560x160 resolution of the AlphaSmart Dana and as such, may not render/operate correctly on other Palm devices.
+SiEd-Dana *may* run on other devices running PalmOS v.3.5 or greater, however the SiEd-Dana interfaces are optimized for the 560x160 resolution of the AlphaSmart Dana and as such, may not render/operate correctly on other Palm devices. For now, use [SiEd](https://github.com/rtiangha/SiEd) instead.
 
 ## Usage
 There is a usage guide with screenshots and other useful information available from the original SiEd project site, which you can now access via [Archive.org's Wayback Machine](https://web.archive.org/web/20070130170506/http://benroe.com/sied/user.php). Even though the screen size in the User Guide is based on screens with a resolution of 160x160 pixels, functionality-wise, the interfaces are the same.
@@ -60,7 +60,7 @@ The targets (i.e. type `make <target>`) available for the make process are:
 * `portuguese`, `norwegian`, `dutch`, `italian`, `french`, `german`, `spanish`, `catalan`: builds appropriate language
 
 ##Copyright Notice
-This software is licensed under the terms of the GPL, included in the LICENSE file in the source code directory.
+This software is licensed under the terms of version 2 of the GPL, included in the LICENSE file in the source code directory.
 
 The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the translations is attributed in the `text_resource.h` file. Portions of SiEd-Dana are based off of the original SiEd project Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
 
