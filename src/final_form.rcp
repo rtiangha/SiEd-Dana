@@ -585,7 +585,7 @@ ALERT ID 1011
  INFORMATION
 BEGIN
  TITLE "SiEd-Dana 0.10.0-beta4"
- MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
+ MESSAGE "\251 2016 Reg Tiangha.\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
  BUTTONS "OK"
 END
 ALERT ID 2506
