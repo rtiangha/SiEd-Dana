@@ -25,7 +25,7 @@
 
 //remaining english strings I could find
 #define FILE_TOO_LARGE "File Too Large"
-#define FILE_TOO_LARGE_TEXT "File exceeds maximum size for SiEd."
+#define FILE_TOO_LARGE_TEXT "File exceeds maximum size for SiEd-Dana."
 #define FILE_TRUNCATION_TEXT "Truncated version of file loaded due to insufficient memory."
 #define FILE_TRUNCATION "Memory Error"
 #define FROM_TOP "From Top"
@@ -71,7 +71,7 @@
 #define SELECTION_MODE "Tipus de selecció"
 #define TEXT_BEAM "Envia"
 #define BEAM_FILE "L'arxiu seleccionat"
-#define BEAM_APP "l'aplicació SiEd"
+#define BEAM_APP "l'aplicació SiEd-Dana"
 #define PALM_STYLE_TEXT "A l'estil Palm"
 #define STANDARD_STYLE_TEXT "Estàndar"
 #define SELECT_ALL "Selecciona-ho tot"

@@ -846,7 +846,7 @@ ALERT ID 1703
         ERROR
 BEGIN
         TITLE "Palm OS Version Error"
-        MESSAGE "SiEd requires at least PalmOS 3.5 to run."
+        MESSAGE "SiEd-Dana requires at least PalmOS 3.5 to run."
         BUTTONS "Exit"
 END
 ALERT ID 1793

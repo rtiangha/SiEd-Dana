@@ -1063,8 +1063,8 @@ void SiFileDialog::Beam(const UInt16 menuItemId)
 
 		if (!err)
 		{
-			exgSocket.description = "SiEd Editor";
-			exgSocket.name = "SiEd.prc";
+			exgSocket.description = "SiEd-Dana Editor";
+			exgSocket.name = "SiEd-Dana.prc";
 			send = true;
 		}
 	}

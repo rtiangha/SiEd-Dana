@@ -449,7 +449,7 @@ void encrypt_SiFilePlugin::write_header()
 	log_entry("Writing Header");
 #endif
 
-	//header is FILE_TYPE(4 bytes, identifies SiEd encrytped) followed by the salt used, 20 bytes
+	//header is FILE_TYPE(4 bytes, identifies SiEd-Dana encrytped) followed by the salt used, 20 bytes
 
 	//Char * buff=(Char*)MemPtrNew(FILE_TYPE_SIZE+SALT_LENGTH);
 	SiMemChunk *temp_chunk=SiMemHandler::get_chunk(NULL,FILE_TYPE_SIZE+SALT_LENGTH,NON_TEXT_HEAP);
