@@ -31,8 +31,11 @@ else
 	cp sied-dana.prc ../../SiEd-Dana-$1/sied-dana-current.prc
 	zip sied-dana-$1.prc.zip sied-dana.prc
 	mv sied-dana-$1.prc.zip ../../SiEd-Dana-$1/
-	cp ../docs/changelog ../../SiEd-Dana-$1/changelog.txt
-	cp ../docs/install ../../SiEd-Dana-$1/install.txt
+	cp ../docs/changelog ../../SiEd-Dana-$1/Changelog.txt
+	cp ../docs/install ../../SiEd-Dana-$1/Install.txt
+	cp ../docs/knownissues ../../SiEd-Dana-$1/KnownIssues.txt
+	cp ../README.md ../../SiEd-Dana-$1/README.md
+	cp ../LICENSE ../../SiEd-Dana-$1/LICENSE
 
 	make_release $1 french fr
 	make_release $1 german de

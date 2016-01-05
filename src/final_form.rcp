@@ -1,4 +1,4 @@
-VERSION "0.10.0"
+VERSION "0.10.0-beta4"
 HEX "wTap" ID 1000 0x00 0x00 0x00 0x01
 ICONFAMILYEX
 BEGIN
@@ -448,7 +448,7 @@ ALERT ID 1709
  ERROR
 BEGIN
  TITLE "File Too Large"
- MESSAGE "File exceeds maximum size for SiEd."
+ MESSAGE "File exceeds maximum size for SiEd-Dana."
  BUTTONS "OK"
 END
 ALERT ID 3001
@@ -584,8 +584,8 @@ END
 ALERT ID 1011
  INFORMATION
 BEGIN
- TITLE "SiEd 0.10.0_beta3"
- MESSAGE "\251 Benjamin Roe 2003-2004\nArtwork \251 Stefan Smith and Tankut Eric\nwww.benroe.com/sied\nThis application is distributed under the terms of the GPL. "
+ TITLE "SiEd-Dana 0.10.0-beta4"
+ MESSAGE "\251 2016 Reg Tiangha\n\SiEd-Dana is based on the original SiEd text editor, \251 2003-2005\nBenjamin Roe.\nArtwork is \251 Stefan Smith & Tankut Eric.\nThis application is distributed under the terms of the GPLv2."
  BUTTONS "OK"
 END
 ALERT ID 2506
@@ -806,7 +806,7 @@ MENU ID 1300
        PULLDOWN "Beam"
                BEGIN
                         MENUITEM "Selected file" ID 1300 "F"
-                        MENUITEM "SiEd App." ID 1305 "A"
+                        MENUITEM "SiEd-Dana App." ID 1305 "A"
                 END
         END
 ALERT ID 1950

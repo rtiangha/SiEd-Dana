@@ -1,6 +1,9 @@
 # SiEd-Dana - A Text Editor Optimized for the AlphaSmart Dana
 A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10-beta3 release of [SiEd](https://github.com/rtiangha/SiEd) from April 27, 2005 by Benjamin Roe.
 
+## Current Version
+* The current version of SiEd-Dana is 0.10-beta4.
+
 ## What Is It?
 SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under the GPL.
 
@@ -32,8 +35,10 @@ SiEd-Dana *may* run on other devices running PalmOS v.3.5 or greater, however th
 ## Usage
 There is a usage guide with screenshots and other useful information available from the original SiEd project site, which you can now access via [Archive.org's Wayback Machine](https://web.archive.org/web/20070130170506/http://benroe.com/sied/user.php). Even though the screen size in the User Guide is based on screens with a resolution of 160x160 pixels, functionality-wise, the interfaces are the same.
 
-## Known Issues
-* There is a bug where the program may crash when using the **Inc. Search** functionality.
+## Known Issues (as of SiEd-Dana-beta4)
+* Will most likely contain any bugs that were already present in the original SiEd-0.10-beta3 release.
+* Does not handle Screen Rotate very well; will edit and render text off-screen once the cursor goes past 160 pixels in vertical mode. For now, use SiEd-Dana in normal display mode.
+* Let me know if you find anything else by filing a report! 
 
 ## Development Environment
 Compiles using [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/).
