@@ -35,7 +35,7 @@ else
 	cp ../docs/install ../../SiEd-Dana-$1/Install.txt
 	cp ../docs/knownissues ../../SiEd-Dana-$1/KnownIssues.txt
 	cp ../README.md ../../SiEd-Dana-$1/README.md
-	cp ../LICENSE ../../SiEd-Dana-$1/LICENSE
+	cp ../LICENSE ../../SiEd-Dana-$1/LICENSE.txt
 
 	make_release $1 french fr
 	make_release $1 german de
