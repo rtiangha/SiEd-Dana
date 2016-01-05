@@ -59,7 +59,8 @@ The targets (i.e. type `make <target>`) available for the make process are:
 
 * `portuguese`, `norwegian`, `dutch`, `italian`, `french`, `german`, `spanish`, `catalan`: builds appropriate language
 
-Copyright Notice: This software is licensed under the terms of the GPL, included in the LICENSE file in the source code directory.
+##Copyright Notice
+This software is licensed under the terms of the GPL, included in the LICENSE file in the source code directory.
 
 The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the translations is attributed in the `text_resource.h` file. Portions of SiEd-Dana are based off of the original SiEd project Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
 
