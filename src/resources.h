@@ -235,9 +235,9 @@ enum SiReturnCode {ACTION_CANCELLED,ERROR,ACTION_OK};
 #define BeamMenuFile 1300
 #define BeamMenuSiEd 1305
 // #define COMMAND_LINE 13
-#define WIDTH 152
-#define ACTIVEWIDTH 151
-#define TOTAL_WIDTH 160
+#define WIDTH 552
+#define ACTIVEWIDTH 551
+#define TOTAL_WIDTH 560
 #define BORDER 1
 //#define __DEBUG__
 #define THE_CARD 0
