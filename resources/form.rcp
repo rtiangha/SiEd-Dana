@@ -23,6 +23,10 @@
 
 #include "../src/text_resource.h"
 #include "../src/form_pos.h"
+
+// P-Resize support
+#include "../src/presize/resizeconsts.h"
+
 VERSION "0.10.0-beta4"
 
 // Required for AlphaSmart Dana's WideTall support
