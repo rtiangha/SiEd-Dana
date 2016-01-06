@@ -28,6 +28,12 @@ VERSION "0.10.0-beta4"
 // Required for AlphaSmart Dana's WideTall support
 HEX "wTap" ID 1000 0x00 0x00 0x00 0x01
 
+// Required for Tungsten T3 support
+HEX "Smrt" ID 1000 0x00 0x00 0x00 0x03
+
+// Required for Handera support
+HEX "sKst" ID 1000 0x00 0x00 0x00 0x00
+
 ICONFAMILYEX
 BEGIN
 	BITMAP "../resources/icon.bmp" BPP 1  TRANSPARENT 255 0 255

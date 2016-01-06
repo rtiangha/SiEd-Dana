@@ -89,7 +89,7 @@ frm.bin: ../resources/form.rcp
 	pilrc final_form.rcp ../build/
 
 textedit:  $(OBJ) sied-sections.o sied-sections.ld
-	$(CC) $(CXXFLAGS) $(BUILD_OBJ) -Wl,-O1 -Wl,-relax -Wl,-T ../scripts/text_64k_palmos3  sied-sections.o sied-sections.ld  -lPalmOSGlue -o ../build/textedit
+	$(CC) $(CXXFLAGS) $(BUILD_OBJ) -Wl,-O1 -Wl,-relax -Wl,-T ../scripts/text_64k_palmos3  sied-sections.o sied-sections.ld -L ./presize/libResizeStatic.a  -lPalmOSGlue -o ../build/textedit
 
 %.o:%.cc
 	$(CC) $(CXXFLAGS) -c $< -o ../build/$@

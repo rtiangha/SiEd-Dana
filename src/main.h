@@ -26,6 +26,9 @@
 #include "sections.h"
 #include "edit_interface.h"
 
+// Resize Support
+#include "presize/resize.h"
+
 // Include AlphaSmart libraries
 #include <WideTallApp.h>
 #include <WideTallAppChars.h>
