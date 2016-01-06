@@ -37,7 +37,7 @@ There is a usage guide with screenshots and other useful information available f
 
 ## Known Issues (as of SiEd-Dana 0.10.0-beta4)
 * Will most likely contain any bugs that were already present in the original SiEd-0.10.0_beta3 release.
-* Does not handle Screen Rotate very well; will edit and render text off-screen once the cursor goes past 160 pixels in vertical mode. For now, use SiEd-Dana in normal display mode.
+* Does not handle Screen Rotate very well; will edit and render text off-screen once the cursor goes past 160 pixels in Tall mode. For now, use SiEd-Dana in normal Wide display mode.
 * Let me know if you find anything else by filing a report! 
 
 ## Development Environment
