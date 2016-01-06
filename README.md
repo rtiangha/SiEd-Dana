@@ -47,7 +47,7 @@ The original SiEd release from 2005 as published by Benjamin Roe was slightly mo
 
 ## How to Build?
 
-Building a PalmOS executable from this source code requires a complete install of the [PRC-Tools](http://prc-tools.sourceforge.net/) and [PiLRC](http://pilrc.sourceforge.net/) packages, as well as [Palm OS 5 SDK R3 *or* R4](https://web.archive.org/web/20150101205837/http://cdn.xenu.tk/pub/palm-archive/pub/programming/sdk/5.0/) along with [Palm Desktop SDK 5.4](https://web.archive.org/web/20150615082823/http://pdaexpert.net/downloads/palm-os/sdk-v54-para-produtos-palm-com-palm-os/) and a copy of the AlphaSmart Dana SDK.
+Building a PalmOS executable from this source code requires [PRC-Tools v2.3](http://prc-tools.sourceforge.net/) and [PiLRC v3.2](http://pilrc.sourceforge.net/), as well as [Palm OS 5 SDK R3 *or* R4](https://web.archive.org/web/20150101205837/http://cdn.xenu.tk/pub/palm-archive/pub/programming/sdk/5.0/) along with [Palm Desktop SDK 5.4](https://web.archive.org/web/20150615082823/http://pdaexpert.net/downloads/palm-os/sdk-v54-para-produtos-palm-com-palm-os/) and a copy of the AlphaSmart Dana SDK.
 
 When creating your Palm SDK directory by combining the AlphaSmart Dana SDK, Palm OS SDK and the Palm Desktop SDK library files, ensure that the `.h`. files from the AlphaSmart Dana SDK as well as the the `68K` and `Common` directories of the Palm Desktop SDK appear inside the root `include` folder of the Palm OS SDK. Depending on where/how you obtained your SDKs, the library files may have been formatted for Windows machines, which may give warnings when compiling SiEd-Dana under a Linux environment. If so, you'll want to run all of the text files through a utility such as `dos2unix` first to convert them into a Unix-friendly format before working with the files.
 
@@ -62,5 +62,5 @@ The targets (i.e. type `make <target>`) available for the make process are:
 ##Copyright Notice
 This software is licensed under the terms of version 2 of the GPL, included in the LICENSE file in the source code directory.
 
-The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the translations is attributed in the `text_resource.h` file. Portions of SiEd-Dana are based off of the original SiEd project Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
+The icons are Copyright Stefan Smith and Tankut Enric, and the copyright for the various language translations is attributed in the `text_resource.h` file. Portions of SiEd-Dana are based off of the original SiEd project, Copyright 2003-2005 Benjamin Roe. New additions are Copyright 2016 Reg Tiangha.
 
