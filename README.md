@@ -2,7 +2,7 @@
 A fork of the original SiEd Palm OS text editor project, optimized for the AlphaSmart Dana's widescreen display. SiEd-Dana is based off of the 0.10.0_beta3 release of [SiEd](https://github.com/rtiangha/SiEd) from April 27, 2005 by Benjamin Roe.
 
 ## Current Version
-* The current version of SiEd-Dana is [0.10-0-beta4](https://github.com/rtiangha/SiEd-Dana/releases/tag/0.10.0-beta4).
+* The current version of SiEd-Dana is [0.10-0-beta4](https://github.com/rtiangha/SiEd-Dana/releases/tag/v0.10.0-beta4).
 
 ## What Is It?
 SiEd-Dana is a free and open-sourced simple text editor optimized for the AlphaSmart Dana based off of the original SiEd text editor for PalmOS devices by Benjamin Roe. Its purpose is to provide an easy way to create and edit large text documents without the limitations of the built-in Memopad program while taking advantage of the full 560x160 pixel display of the AlphaSmart Dana. The program is distributed under version 2 of the GPL.
